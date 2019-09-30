@@ -1,0 +1,107 @@
+.navbar { width: 100%; }
+
+.headroom {
+    top: 0;
+    left: 0;
+    right: 0;
+    /*z-index: 99999999;*/
+  }
+  .headroom--unfixed {
+    position: relative;
+    transform: translateY(0);
+  }
+  .headroom--scrolled {
+    transition: transform 200ms ease-in-out;
+  }
+  .headroom--unpinned {
+    position: fixed;
+    transform: translateY(-100%);
+  }
+  .headroom--pinned {
+    position: fixed;
+    transform: translateY(0%);
+  }
+
+.articles .swiper-container-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.nolink {cursor: default !important;}
+.articlesection .swiper-pagination {display: block !important;}
+.casesection .swiper-pagination-bullet-active {background-color: #013A51;}
+.casesection .swiper-pagination {position: relative; bottom: 0;}
+.panelsection .panelitem img{height:100%;}
+.partnersection .swiper-wrapper { overflow: visible; }
+.partners { overflow: hidden; }
+.checkboxes label.error { display: none !important; }
+input.error,
+textarea.error { border-color: red; }
+label.error { color: red; font-size: 14px; }
+.contactform  .checkbox-error input[type="checkbox"] + label::before { border: 1px solid red; }
+.bgvideo { position: relative; }
+.bgvideo video { opacity: 0.3; height: 100%; width: 100%; object-fit: cover; top: 0; left: 0px; position: absolute;}
+.vjs-control-bar { display: none !important; }
+.comingsoon .ghostBtn { opacity: 0.5; cursor: default; }
+.comingsoon { cursor: default; }
+.wrapper { padding-top: 0px;}
+
+.articlesection .article { height: 100%;}
+.articlesection .article p a { text-decoration: underline; }
+.articlesection .article .content { padding-bottom: 20px; }
+.articlesection.resource--items .article .ghostBtn { position: absolute; bottom: 15px; width: auto;}
+.articlesection.resource--items .article { position: relative; height: 100%;}
+
+blockquote p { display: inline;}
+
+.demohtml ul { list-style-type: none; margin: 0; padding: 0; }
+.demohtml ul li { padding-left: 40px; padding-bottom: 21px; position: relative; font-size: 18px; line-height: 1em;}
+.demohtml ul li::before {content: "\e919";font-family: 'icomoon';color: #02E59E;font-size: 24px;position: absolute;top: 0;left: 0; }
+.graphicsection p { margin-bottom: 0.8rem; }
+
+@media screen and (min-width: 768px)
+{
+	.articlesection .swiper-pagination { bottom: -4.5rem; }
+}
+@media screen and (min-width: 992px)
+{
+	.partnersection h3 { margin-bottom: 3rem; }
+}
+
+
+@media screen and (max-width: 991px)
+{
+	.partnersection .swiper-button-next { right: -10px; }
+	.partnersection .swiper-button-prev { left: -10px; }
+	.stakeholders .stakeholderlist { flex-wrap: wrap; }
+	/*.howitworks .col-12 { left: 0px; width: 100%; flex: initial; }
+	.howitworks .item1 { padding-right: 18px; width: 50%;}
+	.howitworks .item2, .howitworks .item3 { padding-left: 34px; padding-right: 21px; width: 50%;}
+	.howitworks .item { margin-bottom: 2rem; }
+	.howitworks .item3 { width: 100%; margin-bottom: 6rem;}
+	.howitworks .item3 .icon { padding-top: 60px; }
+	.howitworks .item4 { padding-right: 70px; }
+	.howitworks .item5 { padding-left: 76px; }
+	.howitworks .item4 .fakespot { right: -26px; }
+	.howitworks .item4 .fakespot::after { left: -28px; left: auto; border-left: 0; border-top-left-radius: 0; border-right: 4px solid #02E59E; border-top: 4px solid #02E59E; border-top-right-radius: 20px; }*/
+}
+@media screen and (max-width: 500px)
+{
+	.partnersection .swiper-button-next { right: -15px; }
+	.partnersection .swiper-button-prev { left: -5px; }
+	.articlesection.resource--items .article { height: auto;}
+	/*.howitworks .item5 .fakespot { left: -20px; }
+	.howitworks .item5 { padding-left: 31px; }
+	.howitworks .item4 { padding-right: 32px; }
+	.howitworks .item4 .fakespot { right: 8px; }
+	.howitworks .item4 .step { right: -27px; }
+	.howitworks .item5 .step { left: -26px; }
+	.howitworks .item6 .fakespot::before {border-radius: 0; border-top: 0px; top: 0px;}
+	.howitworks .item6 .fakespot::after {border-radius: 0; border-top: 0px;}*/
+
+	.graphicsection ul.nav-pills { display: table; }
+	.graphicsection ul.nav-pills li { display: table-cell; }
+}

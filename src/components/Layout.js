@@ -1,58 +1,85 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
-import { withPrefix } from 'gatsby'
+import React, { Fragment } from 'react'
+import Helmet from 'react-helmet'
+import { StaticQuery, graphql } from 'gatsby'
+import Meta from './Meta'
+import Nav from './Nav'
+import Footer from './Footer'
 
-const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+import 'modern-normalize/modern-normalize.css'
+import '../../static/css/main.css'
+import '../../static/css/overrides.css'
+
+export default ({ children, meta, title }) => {
   return (
-    <div>
-      <Helmet>
-        <html lang="en" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
+    <StaticQuery
+      query={graphql`
+        query IndexLayoutQuery {
+          settingsYaml {
+            siteTitle
+            siteDescription
+            siteKeywords
+            googleTrackingId
+            socialMediaCard {
+              image
+            }
+          }
+          allPosts: allMarkdownRemark(
+            filter: { fields: { contentType: { eq: "postCategories" } } }
+            sort: { order: DESC, fields: [frontmatter___date] }
+          ) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  title
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        const { siteTitle, socialMediaCard, googleTrackingId } =
+            data.settingsYaml || {},
+          subNav = {
+            posts: data.allPosts.hasOwnProperty('edges')
+              ? data.allPosts.edges.map(post => {
+                  return { ...post.node.fields, ...post.node.frontmatter }
+                })
+              : false
+          }
 
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href={`${withPrefix('/')}img/apple-touch-icon.png`}
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href={`${withPrefix('/')}img/favicon-32x32.png`}
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href={`${withPrefix('/')}img/favicon-16x16.png`}
-          sizes="16x16"
-        />
+        return (
+          <Fragment>
+            <Helmet
+              defaultTitle={siteTitle}
+              titleTemplate={`%s | ${siteTitle}`}
+            >
+              {title}
+            </Helmet>
 
-        <link
-          rel="mask-icon"
-          href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
-          color="#ff4400"
-        />
-        <meta name="theme-color" content="#fff" />
+            <Meta
+              googleTrackingId={googleTrackingId}
+              absoluteImageUrl={
+                socialMediaCard &&
+                socialMediaCard.image &&
+                socialMediaCard.image
+              }
+              {...meta}
+              {...data.settingsYaml}
+            />
 
-        <meta property="og:type" content="business.business" />
-        <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
-        <meta
-          property="og:image"
-          content={`${withPrefix('/')}img/og-image.jpg`}
-        />
-      </Helmet>
-      <Navbar />
-      <div>{children}</div>
-      <Footer />
-    </div>
+            <Nav subNav={subNav} />
+
+            <Fragment>{children}</Fragment>
+
+            <Footer />
+            
+          </Fragment>
+        )
+      }}
+    />
   )
 }
-
-export default TemplateWrapper

@@ -1,60 +1,717 @@
+# See https://github.com/netlify/netlify-cms/blob/master/example/config.yml
 backend:
   name: git-gateway
-  branch: master
+  branch: master # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+publish_mode: editorial_workflow
 
-collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
-      - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+media_library:
+  name: uploadcare
+  config:
+    publicKey: 33c1824b31683316532c
+    multiple: false
+    tabs: 'file camera url facebook gdrive'
+    effects: 'crop,rotate,enhance,grayscale'
+    imageShrink: '2000x2000'
+    previewStep: true
+    clearable: true
+    crop: "free, 357:208, 350:524, 540:380"
 
-  - name: "pages"
-    label: "Pages"
+collections: # A list of collections the CMS should be able to edit
+  - name: 'pages'
+    label: 'Page'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: true
     files:
-      - file: "src/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'content/pages/home.md'
+        label: 'Home Page'
+        name: 'home-page'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Subheading, name: subheading, widget: string}
-          - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-      - file: "src/pages/about/index.md"
-        label: "About"
-        name: "about"
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HomePage,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
+          - label: 'Accordion'
+            name: 'accordion'
+            widget: 'list'
+            required: false
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: Content, name: content, widget: text }
+          - label: 'Meta'
+            required: false
+            name: 'meta'
+            widget: 'object'
+            fields:
+              - { label: Title, name: title, widget: string, required: false }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  label: Keywords,
+                  name: keywords,
+                  widget: text,
+                  required: false,
+                }                
+              - {
+                  label: Canonical Link,
+                  name: canonicalLink,
+                  widget: string,
+                  required: false,
+                }
+              - {
+                  label: Noindex,
+                  name: noindex,
+                  widget: boolean,
+                  required: false,
+                }
+
+  - name: basicPage
+    label: Basic page
+    editor:
+      preview: false
+    folder: content/basicPage
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: DefaultPage,
+        }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - label: Sections
+        name: sections
+        widget: list
+        types:
+          - label: Header
+            name: header
+            type: Header
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: Header }
+              - label: Large header
+                name: largeheader
+                widget: select
+                options:
+                  - { label: "Large", value: "header--main" }
+                  - { label: "Medium", value: "header--medium" }
+                  - { label: "Small", value: "header--small" }
+              - { label: Grey header, name: greyheader, widget: boolean, required: false }
+              - { label: Background image, name: backgroundimage, widget: image, required: false }
+              - { label: Background video, name: backgroundvideo, widget: file, required: false }
+              - name: cta
+                label: Cta
+                widget: list
+                required: false
+                fields:
+                  - { name: title, label: Title, widget: string, default: ''}
+                  - { name: subtitle, label: Subtitle, widget: string, default: ''}
+                  - { label: Link, name: link,  widget: relation, collection: 'basicPage',  searchFields: ['title'], valueField: 'slug' }
+          - label: Grey header
+            name: simpleHeader
+            type: SimpleHeader
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }       
+          - label: Basic text
+            name: basicText
+            type: BasicText
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+          - label: Text with image
+            name: imageText
+            type: ImageText
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Image, name: backgroundimage, widget: image, required: true }
+              - { label: CTA, name: subtitle, widget: string, required: false }
+              - { label: Link, name: externallink, widget: string, default: '', required: false }
+              - label: Theme
+                name: theme
+                widget: select
+                options:
+                  - { label: "Grey", value: "bg-grey" }
+                  - { label: "Light", value: "bg-white" }
+          - label: Demo block
+            name: demoText
+            type: Demotext
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Demo modal content, name: title, widget: markdown, required: true }
+              - { label: Image, name: backgroundimage, widget: image, required: true }
+              - { label: CTA, name: subtitle, widget: string, required: false }
+              - label: Theme
+                name: theme
+                widget: select
+                options:
+                  - { label: "Grey", value: "bg-grey" }
+                  - { label: "Light", value: "bg-white" }
+          - label: Text with quote
+            name: quoteText
+            type: QuoteText
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: markdown }
+              - { label: Content, name: content, widget: markdown }
+              - { label: Quote, name: description, widget: text }
+              - label: Theme
+                name: theme
+                widget: select
+                options:
+                  - { label: "Blue", value: "bg-blue" }
+                  - { label: "Light", value: "bg-white" }
+          - label: Quote
+            name: quote
+            type: Quote
+            widget: object
+            fields:
+              - { label: Quote, name: description, widget: markdown, buttons:['bold'] }
+              - { label: Source, name: title, widget: string, required: false }
+          - label: Icons block
+            name: iconsBlock
+            type: IconsBlock
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: IconsBlock }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - label: Icon
+                    name: icon
+                    widget: select
+                    options:
+                      - { label: "Armchair", value: "icon icon-armchair-3" }
+                      - { label: "Ecology", value: "icon icon-ecology-leaf-bulb" }
+                      - { label: "Clock", value: "icon icon-time-clock-hand-1" }
+                      - { label: "Rocket", value: "icon icon-space-rocket" }
+                      - { label: "Share", value: "icon icon-multiple-actions-share-1" }
+                      - { label: "Ribbon", value: "icon icon-certified-ribbon" }
+                      - { label: "Co2", value: "icon icon-pollution-co2" }
+                      - { label: "Battery", value: "icon icon-renewable-energy-battery-charge" }
+                      - { label: "Real estate", value: "icon icon-real-estate-action-building-star" }
+                      - { label: "Ruler", value: "icon icon-measure-ruler-divider" }
+                      - { label: "Reception", value: "icon icon-reception-bell-call" }
+                      - { label: "Window", value: "icon icon-app-window-search-text" }
+                      - { label: "Tablet", value: "icon icon-performance-tablet-increase" }
+                      - { label: "Payment", value: "icon icon-cash-payment-coin" }
+                      - { label: "Real estate pay", value: "icon icon-real-estate-deal-pay-building" }
+                      - { label: "Ranking", value: "icon icon-ranking-people-first" }
+          - label: Steps block
+            name: stepsBlock
+            type: StepsBlock
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: StepsBlock }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+              - { name: subtitle, label: Link title, widget: string, default: ''}
+              - { name: link, label: Link,  widget: relation, collection: 'basicPage',  searchFields: ['title'], valueField: 'slug' }
+          - label: Tabs block
+            name: tabsBlock
+            type: TabsBlock
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: TabsBlock }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Content, name: content, widget: markdown, required: false }
+                  - { label: Image, name: backgroundimage, widget: image, required: false }        
+          - label: Resources block
+            name: resourcesBlock
+            type: ResourcesBlock
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: ResourcesBlock }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string, default: ''}
+                  - { label: Content, name: content, widget: text }
+                  - { label: Image, name: backgroundimage, widget: image, required: false }
+                  - { label: Read more label, name: subtitle, widget: string, default: '', required: true }
+                  - { label: Read more link, name: externallink, widget: string, default: '', required: false }
+          - label: How it works
+            name: howItWorks
+            type: HowItWorks
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: HowItWorks }
+              - { label: Title, name: title, widget: markdown, default: ''}
+              - { label: Block 1, name: content1, widget: markdown }
+              - { label: Block 2, name: content2, widget: markdown }
+              - { label: Block 3, name: content3, widget: markdown }
+              - { label: Block 4, name: content4, widget: markdown }
+              - { label: Block 5, name: content5, widget: markdown }
+              - { label: Block 6, name: content6, widget: markdown }
+          - label: News
+            name: news
+            type: News
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: News }
+              - { label: Content, name: content, widget: markdown }
+          - label: Case
+            name: case
+            type: Case
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: Case }
+              - { name: link, label: Case,  widget: relation, collection: 'case',  searchFields: ['title'], valueField: 'slug' }
+          - label: Team
+            name: team
+            type: Team
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: Team }
+              - { label: Content, name: content, widget: markdown }
+          - label: History
+            name: history
+            type: History
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: History }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string, required: true }                   
+                  - { label: Content, name: content, widget: markdown, required: true }         
+          - label: Locations block
+            name: panelsBlock
+            type: PanelsBlock
+            widget: object
+            fields:
+              - { label: Template, name: template, widget: hidden, default: PanelsBlock }
+          - label: Highlight
+            name: highlight
+            type: Highlight
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: Highlight }
+              - { label: Background image, name: backgroundimage, widget: image, required: true }
+              - { label: Icon, name: featuredImage, widget: image, required: true }
+              - name: block
+                label: Block
+                widget: list
+                required: false
+                fields:
+                  - { label: Content, name: content, widget: markdown, required: true }
+          - label: Partners block
+            name: partnersBlock
+            type: PartnersBlock
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: PartnersBlock }
+          - label: Testmonials block
+            name: testimonialsBlock
+            type: TestmonialsBlock
+            widget: object
+            fields:
+              - { label: Content, name: content, widget: markdown }
+              - { label: Template, name: template, widget: hidden, default: TestmonialsBlock }
+              - label: Theme
+                name: theme
+                widget: select
+                options:
+                  - { label: "Grey", value: "bg-grey" }
+                  - { label: "Light", value: "bg-white" }
+      - label: 'Contact form'
+        required: false
+        name: 'contactform'
+        widget: 'object'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/products/index.md"
-        label: "Products Page"
-        name: "products"
+          - { label: Title, name: title, widget: markdown, required: false }
+          - { label: Enabled, name: enablecontactform, widget: boolean, required: false }
+          - label: Theme
+            name: contacttheme
+            widget: select
+            default: "contact--dark"
+            options:
+              - { label: "Dark", value: "contact--dark" }
+              - { label: "Light", value: "contact--light" }
+      - label: 'Contact bar'
+        required: false
+        name: 'contactbar'
+        widget: 'object'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Description, name: description, widget: string}
-          - {label: Intro, name: intro, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Text, name: text, widget: text}]}]}
-          - {label: Main, name: main, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Image1, name: image1, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image2, name: image2, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}, {label: Image3, name: image3, widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}]}
-          - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
-          - {label: Full_image, name: full_image, widget: image}
-          - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+          - { label: Enabled, name: enablecontactbar, widget: boolean, required: false }
+          - { label: Title, name: title, widget: markdown, required: false }
+          - { label: CTA, name: content, widget: string, required: false }
+      - { label: Cta block, name: ctablock, widget: boolean, required: false }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: news
+    label: News
+    editor:
+      preview: false
+    folder: content/news
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: SingleNews }
+      - { label: Title, name: title, widget: string }
+      - label: 'Status'
+        name: 'status'
+        widget: 'select'
+        options: ['Published', 'Featured', 'Draft']
+        default: 'Published'
+      - { label: Date, name: date, widget: date }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Excerpt, name: excerpt, widget: markdown }
+      - { label: Read more label, name: subtitle, widget: string, default: '', required: false }
+      - { label: Read more link, name: externallink, widget: string, default: '', required: false }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: case
+    label: Case
+    editor:
+      preview: false
+    folder: content/case
+    slug: 'cases/{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: SingleCase }
+      - { label: Client, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Building, name: building, widget: text }
+      - { label: Floor area, name: floorarea, widget: string }
+      - { label: Activation, name: activation, widget: date }
+      - name: keyresults
+        label: Key results
+        widget: list
+        required: false
+        fields:
+          - { label: Content, name: content, widget: markdown, required: true, buttons: [] }
+          - label: Icon
+            name: icon
+            widget: select
+            options:
+              - { label: "Armchair", value: "icon icon-armchair-3" }
+              - { label: "Ecology", value: "icon icon-ecology-leaf-bulb" }
+              - { label: "Clock", value: "icon icon-time-clock-hand-1" }
+              - { label: "Rocket", value: "icon icon-space-rocket" }
+              - { label: "Share", value: "icon icon-multiple-actions-share-1" }
+              - { label: "Ribbon", value: "icon icon-certified-ribbon" }
+              - { label: "Co2", value: "icon icon-pollution-co2" }
+              - { label: "Battery", value: "icon icon-renewable-energy-battery-charge" }
+              - { label: "Real estate", value: "icon icon-real-estate-action-building-star" }
+              - { label: "Ruler", value: "icon icon-measure-ruler-divider" }
+              - { label: "Reception", value: "icon icon-reception-bell-call" }
+              - { label: "Window", value: "icon icon-app-window-search-text" }
+              - { label: "Tablet", value: "icon icon-performance-tablet-increase" }
+              - { label: "Payment", value: "icon icon-cash-payment-coin" }
+              - { label: "Real estate pay", value: "icon icon-real-estate-deal-pay-building" }
+              - { label: "Ranking", value: "icon icon-ranking-people-first" }
+      - label: Gallery
+        name: featuredGallery
+        widget: image
+        required: false
+        media_library:
+          config:
+            multiple: true
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: location
+    label: Location
+    editor:
+      preview: false
+    folder: content/location
+    slug: 'location/{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: Location }
+      - { label: Title, name: title, widget: string }
+      - { label: Location, name: subtitle, widget: string }      
+      - { label: Weight, name: sortweight, widget: number, default: 0, valueType: int, min: 0, max: 100, step: 1 }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - { label: Content, name: body, widget: markdown }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: partner
+    label: Partner
+    editor:
+      preview: false
+    folder: content/partner
+    slug: 'partner/{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: Partner }
+      - { label: Title, name: title, widget: string } 
+      - { label: Weight, name: sortweight, widget: number, default: 0, valueType: int, min: 0, max: 100, step: 1 }
+      - { label: Featured Image, name: featuredImage, widget: image, required: false }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: testimonial
+    label: Testimonial
+    editor:
+      preview: false
+    folder: content/testimonial
+    slug: 'testimonial/{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: Testimonial }
+      - { label: Name, name: title, widget: string }
+      - { label: Function, name: subtitle, widget: string }   
+      - { label: Testimonial, name: excerpt, widget: text }
+      - { label: Weight, name: sortweight, widget: number, default: 0, valueType: int, min: 0, max: 100, step: 1 }
+      - { label: Featured Image, name: featuredImage, widget: image, required: true }
+
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: team
+    label: Team
+    editor:
+      preview: false
+    folder: content/team
+    slug: 'team/{{slug}}'
+    create: true
+    fields:
+      - { label: Template, name: template, widget: hidden, default: Team }
+      - { label: Name, name: title, widget: string }
+      - { label: Function, name: subtitle, widget: string }
+      - { label: Weight, name: weight, widget: number, default: 0, valueType: int, min: 0, max: 100, step: 1 }
+      - { label: Linkedin, name: externallink, widget: string, default: '', required: false}
+      - { label: Featured Image, name: featuredImage, widget: image }
+      - label: 'Meta'
+        required: false
+        name: 'meta'
+        widget: 'object'
+        fields:
+          - { label: Title, name: title, widget: string, required: false }
+          - {
+              label: Description,
+              name: description,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Keywords,
+              name: keywords,
+              widget: text,
+              required: false,
+            } 
+          - {
+              label: Canonical Link,
+              name: canonicalLink,
+              widget: string,
+              required: false,
+            }
+          - { label: Noindex, name: noindex, widget: boolean, required: false }
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - file: 'content/settings/global.yml'
+        label: 'Global Settings'
+        name: 'global-settings'
+        fields:
+          - { label: Site Title, name: siteTitle, widget: string }
+          - { label: Site Url, name: siteUrl, widget: string, required: false }
+          - {
+              label: Site Description,
+              name: siteDescription,
+              widget: text,
+              required: false,
+            }
+          - {
+              label: Site Keywords,
+              name: siteKeywords,
+              widget: text,
+              required: false,
+            }            
+          - label: Social Media Card
+            name: socialMediaCard
+            widget: object
+            fields:
+              - { label: Image, name: image, widget: image, required: false }
+          - {
+              label: Google Analytics Tracking Id,
+              name: googleTrackingId,
+              widget: string,
+              required: false,
+            }
+          - { label: Address, name: address, widget: markdown }
+          - { label: Email, name: email, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Linkedin, name: linkedin, widget: string }
+          - { label: Twitter, name: twitter, widget: string }

@@ -1,77 +1,140 @@
+const postcssPresetEnv = require('postcss-preset-env')
+
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+    title: 'DeltaQ',
+    siteUrl: 'https://deltaq.io'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    'gatsby-plugin-netlify-cms',
+    'gatsby-transformer-yaml',
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        /*id: 'GTM-add_your_tag_here',*/
+        id: 'GTM-XXXXXXXX',
+        includeInDevelopment: false
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        runtimeCaching: [
+          {
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `cacheFirst`
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern: /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `staleWhileRevalidate`
+          },
+          {
+            // uploadcare
+            urlPattern: /^https:\/\/ucarecdn.com\/[-a-zA-Z0-9@:%_\+.~#?&//=]*?\/10x\//,
+            handler: `staleWhileRevalidate`
+          }
+        ],
+        skipWaiting: true,
+        clientsClaim: true
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'deltaq',
+        short_name: 'deltaq',
+        start_url: '/home',
+        background_color: '#f7f9f9',
+        theme_color: '#f7f9f9',
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: 'standalone',
+        icon: `${__dirname}/static/favicons/android-chrome-192x192.png` // This path is relative to the root of the site.
+      }
+    },
+
+    // Add static assets before markdown files
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
-      },
+        path: `${__dirname}/static/images`,
+        name: 'images'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
-      },
+        path: `${__dirname}/content`,
+        name: 'pages'
+      }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/img`,
-        name: 'images',
-      },
-    },
+
+    // images
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-images',
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
-            },
+              maxWidth: 800,
+              linkImagesToOriginal: false
+            }
           },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
+          `gatsby-remark-responsive-iframe`
+        ]
+      }
     },
+
+    // css (replace with gatsby-plugin-sass for v2)
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          postcssPresetEnv({
+            browsers: '> 0.5%, last 2 versions, ie 11'
+          })
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          require(`postcss-preset-env`)({
+            browsers: '> 0.5%, last 2 versions, ie 11'
+          })
+        ]
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        // Setting a color is optional.
+        color: 'white',
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        stylesPath: `${__dirname}/src/cms/admin.css`,
+        enableIdentityWidget: true
+      }
     },
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
-    'gatsby-plugin-netlify', // make sure to keep it last in the array
-  ],
+    'gatsby-plugin-netlify' // make sure to keep it last in the array
+  ]
 }

@@ -1,16 +1,28 @@
+import React from 'react'
 import CMS from 'netlify-cms-app'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
+import uploadcare from 'netlify-cms-media-library-uploadcare';
+import './cms-utils'
 
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-import IndexPagePreview from './preview-templates/IndexPagePreview'
+import { HomePageTemplate } from '../templates/HomePage'
+import { DefaultPageTemplate } from '../templates/DefaultPage'
 
-CMS.registerMediaLibrary(uploadcare)
-CMS.registerMediaLibrary(cloudinary)
+CMS.registerMediaLibrary(uploadcare);
+CMS.init();
 
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
+if (
+  window.location.hostname === 'localhost' &&
+  window.localStorage.getItem('netlifySiteURL')
+) {
+  CMS.registerPreviewStyle(
+    window.localStorage.getItem('netlifySiteURL') + '/styles.css'
+  )
+} else {
+  CMS.registerPreviewStyle('/styles.css')
+}
+
+CMS.registerPreviewTemplate('home-page', ({ entry }) => (
+  <HomePageTemplate {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('basicPage', ({ entry }) => (
+  <DefaultPageTemplate {...entry.toJS().data} />
+))

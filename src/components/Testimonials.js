@@ -1,28 +1,57 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { v4 } from 'uuid'
+import React, { Component, Fragment } from 'react'
+import { graphql } from 'gatsby'
+import Marked from 'react-markdown'
+import TestimonialsSection from './TestimonialsSection'
 
-const Testimonials = ({ testimonials }) => (
-  <div>
-    {testimonials.map(testimonial => (
-      <article key={v4()} className="message">
-        <div className="message-body">
-          {testimonial.quote}
-          <br />
-          <cite> – {testimonial.author}</cite>
-        </div>
-      </article>
-    ))}
-  </div>
-)
+export const query = graphql`
+  fragment Header on MarkdownRemark {
+    frontmatter {
+      sections {
+        type
+      }
+    }
+  }
+`
+export default class Testimonials extends Component {
+  state = {
+    loaded: false,
+    isOpen: false,
+    sliderImages: [],
+    index: 0
+  }
+ 
+  isOpen(isOpen, index) {
+    if (typeof index === 'undefined') index = 0
+    this.setState({ isOpen, index })
+  }
 
-Testimonials.propTypes = {
-  testimonials: PropTypes.arrayOf(
-    PropTypes.shape({
-      quote: PropTypes.string,
-      author: PropTypes.string,
-    })
-  ),
+  componentDidMount() {
+
+  }
+
+  render() {
+    const { data } = this.props;
+    return (
+      <Fragment>
+        <section className={["testimonialsection", "py-max", data.theme].join(" ")} >
+          <div className="container">
+            <div className="row">
+              <div className="offset-lg-2 col-lg-8 col-12 text-center">
+                <Marked>
+                  { data.content }
+                </Marked>
+              </div>
+              <div className="offset-lg-2 col-lg-8 col-12">
+                <TestimonialsSection data={data}/>
+              </div>
+            </div>
+          </div>
+        </section>
+      </Fragment>
+    )
+  }
 }
 
-export default Testimonials
+Testimonials.propTypes = {
+  
+}

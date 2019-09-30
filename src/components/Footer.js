@@ -1,115 +1,88 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import Marked from 'react-markdown'
 
-import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
-import instagram from '../img/social/instagram.svg'
-import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
+export default () => {
+  return (
+    <StaticQuery
+      query={graphql`
+        query dIndexLayoutQuery {
+          settingsYaml {
+            address
+            email
+            phone
+            linkedin
+            twitter
+          }
+        }
+      `}
+      render={data => {
+        const { address, email, phone, linkedin, twitter  } =
+            data.settingsYaml || {}
+        return (
+          <div>
+            <footer className="py-max bg-blue">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-4 col-12">
+                    <Link to="/">
+                      <img src="/img/logo-w.png" alt=""/>
+                    </Link>
+                  </div>
+                  <div className="col-lg-2 col-md-3 col-6 footer-column">
+                    <h3>DeltaQ</h3>
+                    <ul>
+                      <li><Link to="howitworks">How it works</Link></li>
+                      <li><Link to="resources">Resources</Link></li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-2 col-md-3 col-6 footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                      <li><Link to="/about">About</Link></li>
+                      <li><Link to="/partner">Partner</Link></li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-2 col-md-3 col-6 footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                      <li>T: <a href={ "tel:" + phone }>{phone}</a></li>
+                      <li>E: <a href={ "mailto:" + email }>{email}</a></li>
+                    </ul>
+                    <Marked>
+                      { address }
+                    </Marked>
+                  </div>
+                  <div className="col-lg-2 col-md-3 col-6 footer-column">
+                    <h3>Connect</h3>
+                    <ul className="socials">
+                      <li><a href={linkedin} target="_blank" rel="noopener noreferrer"><span className="icon-linkedin"></span></a></li>
+                      <li><a href={twitter} target="_blank" rel="noopener noreferrer"><span className="icon-twitter"></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </footer>
 
-const Footer = class extends React.Component {
-  render() {
-    return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
-            <div className="columns">
-              <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
+            <section className="copyright py-4">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 d-flex">
+                    <p className="m-0">Copyright &copy; {new Date().getFullYear()} DeltaQ. All right reserved. Powered by </p><a href="http://www.3e.eu/" target='_blank' rel="noopener noreferrer"><span className="icon-e"></span></a>
+                    <ul>
+                      <li><Link to="terms-conditions">Terms & conditions</Link></li>
+                      <li><Link to="legal">Legal notice</Link></li>
+                      <li><Link to="disclaimer">Disclaimer</Link></li>
+                      <li><Link to="cookies">Cookie policy</Link></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4 social">
-                <a title="facebook" href="https://facebook.com">
-                  <img
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="instagram" href="https://instagram.com">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-              </div>
-            </div>
+            </section>
           </div>
-        </div>
-      </footer>
-    )
-  }
+        )
+      }}
+    />
+  )
 }
-
-export default Footer
