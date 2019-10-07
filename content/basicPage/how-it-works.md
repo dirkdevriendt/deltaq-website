@@ -74,7 +74,7 @@ sections:
         content: >-
           DeltaQ will steer your heating system to reach the preferred
           temperature for working, just in time. By synchronising with weather
-          predictions DeltaQ will optimise energy consumption.
+          predictions DeltaQ will optimize energy consumption.
         title: Sunny winter morning
     content: >-
       ## How we make a difference
