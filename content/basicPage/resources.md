@@ -21,8 +21,8 @@ sections:
           https://ucarecdn.com/04df7dcd-f734-4d23-94dc-f6043c2e71ec/-/crop/632x445/0,16/-/preview/
         content: PhD Roel De Coninck
         externallink: ''
-        subtitle: Coming soon
-        title: Grey-Box Based Optimal Control for Thermal Systems in Buildings
+        subtitle: Download
+        title: Grey-Box Based Optimal Control
       - content: DeltaQ savings calculation methodology according to IPMVP
         externallink: ''
         subtitle: Coming soon
