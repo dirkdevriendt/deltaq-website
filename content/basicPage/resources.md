@@ -15,7 +15,7 @@ sections:
     type: header
   - block:
       - backgroundimage: >-
-          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/682x480/38,0/-/preview/
+          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/474x480/158,0/-/preview/
         content: DeltaQ gateway technical support for installations.
         externallink: ''
         subtitle: Download
