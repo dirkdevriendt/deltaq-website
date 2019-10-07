@@ -55,7 +55,7 @@ sections:
 
           Our software learns how your building and its users behave.
       - content: |-
-          #### Optimise
+          #### Optimize
 
           Our algorithms anticipate and optimize your building controls.
     content: >-
