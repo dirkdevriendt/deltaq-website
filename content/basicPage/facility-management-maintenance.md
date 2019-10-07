@@ -76,7 +76,7 @@ sections:
   - block:
       - backgroundimage: /images/uploads/deltaq-summer.gif
         content: >-
-          During night-time DeltaQ will insure just in time cooling of your
+          During night-time DeltaQ will ensure just in time cooling of your
           building which results in an optimal energy consumption and a
           comfortable workplace.
         title: Nice summer sunset
