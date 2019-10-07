@@ -11,7 +11,7 @@ excerpt: >-
   Dycker](mailto:benjamin.dedycker@deltaq.io?subject=Meeting%20@%20Realty%202019)
   or [Matthijs De
   Deygere](mailto:matthijs.dedeygere@deltaq.io?subject=Meeting%20@%20Realty%202019)
-subtitle: ''
-externallink: ''
+subtitle: To the Realty website
+externallink: 'https://www.realty-belgium.be/'
 ---
 
