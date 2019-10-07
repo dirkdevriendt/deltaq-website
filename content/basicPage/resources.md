@@ -11,12 +11,15 @@ sections:
     template: Header
     type: header
   - block:
-      - backgroundimage: 'https://ucarecdn.com/25bed7d3-d275-4968-8abd-4c9705d9e72f/'
+      - backgroundimage: >-
+          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/682x480/38,0/-/preview/
         content: DeltaQ gateway technical support for installations.
         externallink: ''
-        subtitle: Coming soon
+        subtitle: Download
         title: Installation info
-      - content: PhD Roel De Coninck
+      - backgroundimage: >-
+          https://ucarecdn.com/04df7dcd-f734-4d23-94dc-f6043c2e71ec/-/crop/632x445/0,16/-/preview/
+        content: PhD Roel De Coninck
         externallink: ''
         subtitle: Coming soon
         title: Grey-Box Based Optimal Control for Thermal Systems in Buildings
