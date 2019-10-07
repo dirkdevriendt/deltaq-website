@@ -7,3 +7,6 @@
 [[redirects]]
   from = "/"
   to = "/home"
+[[redirects]]
+  from = ""
+  to = "/home"
