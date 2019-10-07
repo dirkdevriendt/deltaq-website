@@ -15,7 +15,7 @@ sections:
     type: header
   - block:
       - backgroundimage: >-
-          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/576x405/101,38/-/preview/
+          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/507x480/139,0/-/preview/
         content: DeltaQ gateway technical support for installations.
         externallink: ''
         subtitle: Download
@@ -30,7 +30,7 @@ sections:
         externallink: ''
         subtitle: Coming soon
         title: DeltaQ savings
-      - backgroundimage: 'https://ucarecdn.com/effdcc12-5d92-40c8-9dbf-78f0350014f7/'
+      - backgroundimage: ''
         content: Building requirements for DeltaQ integration
         externallink: ''
         subtitle: Coming soon
