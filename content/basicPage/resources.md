@@ -3,8 +3,7 @@ template: DefaultPage
 slug: resources
 title: Resources
 sections:
-  - backgroundimage: >-
-      https://ucarecdn.com/445fc3ea-381f-49a4-927e-5ece52c439f6/-/crop/1554x963/895,348/-/preview/
+  - backgroundimage: 'https://ucarecdn.com/445fc3ea-381f-49a4-927e-5ece52c439f6/-/preview/'
     content: |-
       # Resources
 
