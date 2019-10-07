@@ -14,7 +14,7 @@ keyresults:
   - content: |-
       Gas savings of 1,285 MWh or 46%
       Electricity savings of 684 MWh or 25%
-    icon: icon icon-renewable-energy-battery-charge
+    icon: icon icon-ecology-leaf-bulb
   - content: Total CO2 emission reduction of 586 ton or 32.5%
     icon: icon icon-pollution-co2
 featuredGallery:
