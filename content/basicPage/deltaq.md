@@ -29,8 +29,9 @@ sections:
           #### Better comfort
 
 
-          DeltaQ ensures a comfortable by **anticipating the weather and
-          occupation forecasts** and optimizing building controls automatically.
+          DeltaQ ensures a comfortable workspace environment by **anticipating
+          the weather and occupation forecasts** and optimizing building
+          controls automatically.
         icon: icon icon-armchair-3
         title: s
       - content: >-
