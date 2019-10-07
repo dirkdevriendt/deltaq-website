@@ -9,6 +9,7 @@ sections:
       # Resources
 
       ## Download and read more about DeltaQ
+    greyheader: true
     largeheader: header--small
     template: Header
     type: header
