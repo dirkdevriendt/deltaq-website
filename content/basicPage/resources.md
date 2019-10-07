@@ -4,7 +4,7 @@ slug: resources
 title: Resources
 sections:
   - backgroundimage: >-
-      https://ucarecdn.com/445fc3ea-381f-49a4-927e-5ece52c439f6/-/crop/2449x1427/0,205/-/preview/
+      https://ucarecdn.com/445fc3ea-381f-49a4-927e-5ece52c439f6/-/crop/2027x1427/239,101/-/preview/
     content: |-
       # Resources
 
