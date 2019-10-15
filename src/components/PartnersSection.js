@@ -8,9 +8,9 @@ export default () => {
   const params = {
     slidesPerView: 1,
 		allowTouchMove: false,
-		speed: 1000,
+		speed: 500,
 	    autoplay: {
-	      delay: 4000,
+	      delay: 2000,
 	      disableOnInteraction: false,
 	    },
 		effect: 'fade',
