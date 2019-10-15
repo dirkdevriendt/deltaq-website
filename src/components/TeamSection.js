@@ -9,7 +9,7 @@ export default () => {
     query Teamblock {
       teams: allMarkdownRemark(
         filter: { fields: { contentType: { eq: "team" } } }
-        sort: { order: ASC, fields: [frontmatter___sortweight] }
+        sort: { order: ASC, fields: [frontmatter___weight] }
       ) {
         edges {
           node {
@@ -18,6 +18,7 @@ export default () => {
               featuredImage
               externallink
               subtitle
+              weight
             }
           }
         }
