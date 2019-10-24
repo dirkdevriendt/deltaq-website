@@ -23,7 +23,7 @@ sections:
       - backgroundimage: >-
           https://ucarecdn.com/04df7dcd-f734-4d23-94dc-f6043c2e71ec/-/crop/632x445/0,16/-/preview/
         content: PhD Roel De Coninck
-        externallink: ''
+        externallink: 'https://zdrive.eu/DEni3D'
         subtitle: Download
         title: Grey-Box Based Optimal Control
       - content: DeltaQ savings calculation methodology according to IPMVP
