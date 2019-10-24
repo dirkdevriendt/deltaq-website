@@ -17,13 +17,13 @@ sections:
       - backgroundimage: >-
           https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/507x480/139,0/-/preview/
         content: DeltaQ gateway technical support for installations.
-        externallink: ''
+        externallink: 'https://zdrive.eu/f8Qh7M'
         subtitle: Download
         title: Installation info
       - backgroundimage: >-
           https://ucarecdn.com/04df7dcd-f734-4d23-94dc-f6043c2e71ec/-/crop/632x445/0,16/-/preview/
         content: PhD Roel De Coninck
-        externallink: ''
+        externallink: 'https://zdrive.eu/DEni3D'
         subtitle: Download
         title: Grey-Box Based Optimal Control
       - content: DeltaQ savings calculation methodology according to IPMVP
