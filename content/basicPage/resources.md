@@ -14,9 +14,8 @@ sections:
     template: Header
     type: header
   - block:
-      - backgroundimage: >-
-          https://ucarecdn.com/e8c95a58-8356-4544-a8e2-e5a57ac22e32/-/crop/1260x634/0,0/-/preview/
-        content: What are the building requirements for a successful DeltaQ integration
+      - backgroundimage: 'https://ucarecdn.com/1a690597-08a7-4084-b2c6-bc3feffbf1c7/'
+        content: Building requirements for successful DeltaQ integration
         externallink: 'https://zdrive.eu/HOQ0DW'
         subtitle: Download
         title: DeltaQ Requirements
