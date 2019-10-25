@@ -39,6 +39,9 @@ sections:
     content: '## Features'
     template: IconsBlock
     type: iconsBlock
+  - link: sodexo_belgium
+    template: Case
+    type: case
   - block:
       - backgroundimage: 'https://ucarecdn.com/69b50d54-ec8c-416c-b1c8-dcfd4c51fdf0/'
         title: =
