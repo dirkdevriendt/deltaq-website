@@ -14,6 +14,11 @@ sections:
     template: Header
     type: header
   - block:
+      - backgroundimage: ''
+        content: What are the building requirements for a successful DeltaQ integration
+        externallink: 'https://zdrive.eu/HOQ0DW'
+        subtitle: Download
+        title: DeltaQ Requirements
       - backgroundimage: >-
           https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/507x480/139,0/-/preview/
         content: Technical support for DeltaQ Gateway installation
@@ -26,15 +31,10 @@ sections:
         externallink: 'https://zdrive.eu/DEni3D'
         subtitle: Download
         title: Grey-Box Based Optimal Control
-      - backgroundimage: ''
-        content: Requirements for DeltaQ integration
-        externallink: 'https://zdrive.eu/HOQ0DW'
-        subtitle: Download
-        title: DeltaQ Requirements
       - content: DeltaQ savings calculation methodology according to IPMVP
         externallink: ''
         subtitle: Coming soon
-        title: DeltaQ savings
+        title: DeltaQ Savings
     template: ResourcesBlock
     type: resourcesBlock
 contactform:
