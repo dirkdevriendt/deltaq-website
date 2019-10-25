@@ -81,9 +81,6 @@ sections:
     type: stepsBlock
   - template: PanelsBlock
     type: panelsBlock
-  - link: sodexo_belgium
-    template: Case
-    type: case
   - backgroundimage: 'https://ucarecdn.com/2cab144b-6a7b-4656-a90e-6cfa8553ce59/'
     block:
       - content: >-
