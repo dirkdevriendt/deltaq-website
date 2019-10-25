@@ -26,15 +26,15 @@ sections:
         externallink: 'https://zdrive.eu/DEni3D'
         subtitle: Download
         title: Grey-Box Based Optimal Control
+      - backgroundimage: ''
+        content: Requirements for DeltaQ integration
+        externallink: 'https://zdrive.eu/HOQ0DW'
+        subtitle: Download
+        title: DeltaQ Requirements
       - content: DeltaQ savings calculation methodology according to IPMVP
         externallink: ''
         subtitle: Coming soon
         title: DeltaQ savings
-      - backgroundimage: ''
-        content: Building requirements for DeltaQ integration
-        externallink: ''
-        subtitle: Coming soon
-        title: Building Requirements
     template: ResourcesBlock
     type: resourcesBlock
 contactform:
