@@ -19,14 +19,12 @@ sections:
         externallink: 'https://zdrive.eu/HOQ0DW'
         subtitle: Download
         title: DeltaQ Requirements
-      - backgroundimage: >-
-          https://ucarecdn.com/2a279ed9-b940-4926-95ce-9b664e229a6b/-/crop/507x480/139,0/-/preview/
+      - backgroundimage: 'https://ucarecdn.com/bd5b9cfc-0f19-4629-badc-9d3c4a74091f/'
         content: Technical support for DeltaQ Gateway installation
         externallink: 'https://zdrive.eu/f8Qh7M'
         subtitle: Download
         title: DeltaQ Gateway Installation Information
-      - backgroundimage: >-
-          https://ucarecdn.com/04df7dcd-f734-4d23-94dc-f6043c2e71ec/-/crop/632x445/0,16/-/preview/
+      - backgroundimage: 'https://ucarecdn.com/b5fbc657-5e87-4196-a5b9-9f157461fb42/'
         content: PhD Roel De Coninck
         externallink: 'https://zdrive.eu/DEni3D'
         subtitle: Download
