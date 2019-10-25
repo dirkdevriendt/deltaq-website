@@ -82,8 +82,8 @@ sections:
       any third party application without the need for additional investments or
       expensive configuration.
     externallink: /resources
-    subtitle: Download specifications
-    theme: bg-grey
+    subtitle: Download Specifications
+    theme: bg-white
     type: imageText
 contactform:
   contacttheme: contact--dark
