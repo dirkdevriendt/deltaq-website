@@ -10,7 +10,7 @@ publish_mode: editorial_workflow
 media_library:
   name: uploadcare
   config:
-    publicKey: 33c1824b31683316532c
+    publicKey: 67c3d2676c752b8c6143
     multiple: false
     tabs: 'file camera url facebook gdrive'
     effects: 'crop,rotate,enhance,grayscale'
