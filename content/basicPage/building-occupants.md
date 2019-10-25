@@ -44,6 +44,9 @@ sections:
     content: '## Features'
     template: IconsBlock
     type: iconsBlock
+  - link: sodexo_belgium
+    template: Case
+    type: case
   - block:
       - backgroundimage: 'https://ucarecdn.com/aa762f16-70bb-4e76-b223-18e14a736f68/'
         content: \-
@@ -71,9 +74,6 @@ sections:
     subtitle: '-'
     template: TabsBlock
     type: tabsBlock
-  - link: sodexo_belgium
-    template: Case
-    type: case
   - template: PanelsBlock
     type: panelsBlock
   - content: '### Trusted by'
