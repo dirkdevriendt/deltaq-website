@@ -97,11 +97,11 @@ sections:
     subtitle: '-'
     template: TabsBlock
     type: tabsBlock
-  - backgroundimage: 'https://ucarecdn.com/ed053b15-159b-488f-86a5-9da625450a9b/'
+  - backgroundimage: 'https://ucarecdn.com/af823d59-57a0-42cc-b27a-d083a67e27a2/'
     content: |-
-      ### Installation information
+      ### DeltaQ Gateway installation
 
-      DeltaQ gateway technical support for installations.
+      Technical support for DeltaQ Gateway installation
     externallink: /resources
     subtitle: Download
     theme: bg-grey
