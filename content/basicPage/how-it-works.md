@@ -104,8 +104,8 @@ meta:
     impact and clear deployment process to implement DeltaQ into your
     operations.
   keywords: >-
-    artificial intelligence, self learning, intervention optimisation, building
-    maintenance
+    artificial intelligence, predictive control, model predictive control, self
+    learning, building automation, building optimization, smart building
   title: How it works and how we deploy
 ---
 
