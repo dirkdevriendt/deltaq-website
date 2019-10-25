@@ -14,7 +14,7 @@ sections:
     template: Header
     type: header
   - block:
-      - backgroundimage: ''
+      - backgroundimage: 'https://ucarecdn.com/a58cbf6d-d2e0-4ea2-94bf-244e761235a6/'
         content: What are the building requirements for a successful DeltaQ integration
         externallink: 'https://zdrive.eu/HOQ0DW'
         subtitle: Download
@@ -23,7 +23,7 @@ sections:
         content: Technical support for DeltaQ Gateway installation
         externallink: 'https://zdrive.eu/f8Qh7M'
         subtitle: Download
-        title: DeltaQ Gateway Installation Information
+        title: DeltaQ Gateway Installation
       - backgroundimage: 'https://ucarecdn.com/b5fbc657-5e87-4196-a5b9-9f157461fb42/'
         content: PhD Roel De Coninck
         externallink: 'https://zdrive.eu/DEni3D'
