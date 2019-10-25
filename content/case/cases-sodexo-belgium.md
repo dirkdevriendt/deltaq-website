@@ -18,8 +18,6 @@ keyresults:
   - content: Total CO2 emission reduction of 586 ton or 32.5%
     icon: icon icon-pollution-co2
 featuredGallery:
-  - 'https://ucarecdn.com/3a240c39-57a6-48e4-bdb7-925ea38645e7~3/nth/0/'
-  - 'https://ucarecdn.com/3a240c39-57a6-48e4-bdb7-925ea38645e7~3/nth/1/'
-  - 'https://ucarecdn.com/3a240c39-57a6-48e4-bdb7-925ea38645e7~3/nth/2/'
+  - 'https://ucarecdn.com/bedb6ee6-8819-4afa-a3ed-8727e08dab5e~1/nth/0/'
 ---
 
