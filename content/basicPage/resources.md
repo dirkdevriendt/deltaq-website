@@ -33,6 +33,13 @@ sections:
         externallink: ''
         subtitle: Coming soon
         title: DeltaQ Savings
+      - backgroundimage: 'https://ucarecdn.com/83be8a14-df65-4044-81c5-0e191a99da60/'
+        content: >-
+          Tender specifications assuring smooth implementation of smart building
+          applications
+        externallink: ''
+        subtitle: Coming soon
+        title: BMS specifications for future-proof buildings
     template: ResourcesBlock
     type: resourcesBlock
 contactform:
