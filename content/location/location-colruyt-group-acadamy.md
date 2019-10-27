@@ -3,6 +3,6 @@ template: Location
 title: Colruyt Group Academy
 subtitle: Leuven
 sortweight: 30
-featuredImage: 'https://ucarecdn.com/0cbf7417-8033-4075-aefe-fbab2871388c/'
+featuredImage: 'https://ucarecdn.com/8506cb90-aa55-4e0f-afec-ab7299c97da5/'
 ---
 Colruyt Group Academy
