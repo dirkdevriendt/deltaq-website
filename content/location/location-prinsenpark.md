@@ -3,6 +3,6 @@ template: Location
 title: Prinsenpark
 subtitle: Genk
 sortweight: 50
-featuredImage: 'https://ucarecdn.com/78e126b7-9fd1-4c5d-94ba-a12b198ccf4c/'
+featuredImage: 'https://ucarecdn.com/4945ccc5-e417-4e1b-992c-859ae1221659/'
 ---
 Prinsenpark
