@@ -2,6 +2,6 @@
 template: Location
 title: Colruyt Group Acadamy
 subtitle: Leuven
-sortweight: 29
+sortweight: 30
 ---
 office building
