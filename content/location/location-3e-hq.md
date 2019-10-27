@@ -3,6 +3,6 @@ template: Location
 title: 3E HQ
 subtitle: Brussels
 sortweight: 40
-featuredImage: 'https://ucarecdn.com/b5791f24-886f-4755-ae20-3597996060fc/'
+featuredImage: 'https://ucarecdn.com/81fe180a-b8b9-4f29-a822-9fecbe922e77/'
 ---
 3E HQ
