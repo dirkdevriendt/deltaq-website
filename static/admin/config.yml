@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     label: 'Page'
     delete: false # Prevent users from deleting documents in this collection
     editor:
-      preview: true
+      preview: false
     files:
       - file: 'content/pages/home.md'
         label: 'Home Page'
@@ -36,18 +36,290 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: HomePage,
             }
-          - { label: Slug, name: slug, widget: hidden, default: '' }
           - { label: Title, name: title, widget: string }
-          - { label: Featured Image, name: featuredImage, widget: image }
-          - { label: Subtitle, name: subtitle, widget: markdown }
-          - { label: Body, name: body, widget: markdown }
-          - label: 'Accordion'
-            name: 'accordion'
-            widget: 'list'
+          - label: Sections
+            name: sections
+            widget: list
+            types:
+              - label: Header
+                name: header
+                type: Header
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: Header }
+                  - label: Large header
+                    name: largeheader
+                    widget: select
+                    options:
+                      - { label: "Large", value: "header--main" }
+                      - { label: "Medium", value: "header--medium" }
+                      - { label: "Small", value: "header--small" }
+                  - { label: Grey header, name: greyheader, widget: boolean, required: false }
+                  - { label: Background image, name: backgroundimage, widget: image, required: false }
+                  - { label: Background video, name: backgroundvideo, widget: file, required: false }
+                  - name: cta
+                    label: Cta
+                    widget: list
+                    required: false
+                    fields:
+                      - { name: title, label: Title, widget: string, default: ''}
+                      - { name: subtitle, label: Subtitle, widget: string, default: ''}
+                      - { label: Link, name: link,  widget: relation, collection: 'basicPage',  searchFields: ['title'], valueField: 'slug' }
+              - label: Grey header
+                name: simpleHeader
+                type: SimpleHeader
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }       
+              - label: Basic text
+                name: basicText
+                type: BasicText
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+              - label: Text with image
+                name: imageText
+                type: ImageText
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Image, name: backgroundimage, widget: image, required: true }
+                  - { label: CTA, name: subtitle, widget: string, required: false }
+                  - { label: Link, name: externallink, widget: string, default: '', required: false }
+                  - label: Theme
+                    name: theme
+                    widget: select
+                    options:
+                      - { label: "Grey", value: "bg-grey" }
+                      - { label: "Light", value: "bg-white" }
+              - label: Demo block
+                name: demoText
+                type: Demotext
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Demo modal content, name: title, widget: markdown, required: true }
+                  - { label: Image, name: backgroundimage, widget: image, required: true }
+                  - { label: CTA, name: subtitle, widget: string, required: false }
+                  - label: Theme
+                    name: theme
+                    widget: select
+                    options:
+                      - { label: "Grey", value: "bg-grey" }
+                      - { label: "Light", value: "bg-white" }
+              - label: Text with quote
+                name: quoteText
+                type: QuoteText
+                widget: object
+                fields:
+                  - { label: Title, name: title, widget: markdown }
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Quote, name: description, widget: text }
+                  - label: Theme
+                    name: theme
+                    widget: select
+                    options:
+                      - { label: "Blue", value: "bg-blue" }
+                      - { label: "Light", value: "bg-white" }
+              - label: Quote
+                name: quote
+                type: Quote
+                widget: object
+                fields:
+                  - { label: Quote, name: description, widget: markdown, buttons:['bold'] }
+                  - { label: Source, name: title, widget: string, required: false }
+              - label: Icons block
+                name: iconsBlock
+                type: IconsBlock
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: IconsBlock }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Content, name: content, widget: markdown }
+                      - label: Icon
+                        name: icon
+                        widget: select
+                        options:
+                          - { label: "Armchair", value: "icon icon-armchair-3" }
+                          - { label: "Ecology", value: "icon icon-ecology-leaf-bulb" }
+                          - { label: "Clock", value: "icon icon-time-clock-hand-1" }
+                          - { label: "Rocket", value: "icon icon-space-rocket" }
+                          - { label: "Share", value: "icon icon-multiple-actions-share-1" }
+                          - { label: "Ribbon", value: "icon icon-certified-ribbon" }
+                          - { label: "Co2", value: "icon icon-pollution-co2" }
+                          - { label: "Battery", value: "icon icon-renewable-energy-battery-charge" }
+                          - { label: "Real estate", value: "icon icon-real-estate-action-building-star" }
+                          - { label: "Ruler", value: "icon icon-measure-ruler-divider" }
+                          - { label: "Reception", value: "icon icon-reception-bell-call" }
+                          - { label: "Window", value: "icon icon-app-window-search-text" }
+                          - { label: "Tablet", value: "icon icon-performance-tablet-increase" }
+                          - { label: "Payment", value: "icon icon-cash-payment-coin" }
+                          - { label: "Real estate pay", value: "icon icon-real-estate-deal-pay-building" }
+                          - { label: "Ranking", value: "icon icon-ranking-people-first" }
+              - label: Steps block
+                name: stepsBlock
+                type: StepsBlock
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: StepsBlock }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Content, name: content, widget: markdown }
+                  - { name: subtitle, label: Link title, widget: string, default: ''}
+                  - { name: link, label: Link,  widget: relation, collection: 'basicPage',  searchFields: ['title'], valueField: 'slug' }
+              - label: Tabs block
+                name: tabsBlock
+                type: TabsBlock
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: TabsBlock }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Content, name: content, widget: markdown, required: false }
+                      - { label: Image, name: backgroundimage, widget: image, required: false }        
+              - label: Resources block
+                name: resourcesBlock
+                type: ResourcesBlock
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: ResourcesBlock }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Title, name: title, widget: string, default: ''}
+                      - { label: Content, name: content, widget: text }
+                      - { label: Image, name: backgroundimage, widget: image, required: false }
+                      - { label: Read more label, name: subtitle, widget: string, default: '', required: true }
+                      - { label: Read more link, name: externallink, widget: string, default: '', required: false }
+              - label: How it works
+                name: howItWorks
+                type: HowItWorks
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: HowItWorks }
+                  - { label: Title, name: title, widget: markdown, default: ''}
+                  - { label: Block 1, name: content1, widget: markdown }
+                  - { label: Block 2, name: content2, widget: markdown }
+                  - { label: Block 3, name: content3, widget: markdown }
+                  - { label: Block 4, name: content4, widget: markdown }
+                  - { label: Block 5, name: content5, widget: markdown }
+                  - { label: Block 6, name: content6, widget: markdown }
+              - label: News
+                name: news
+                type: News
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: News }
+                  - { label: Content, name: content, widget: markdown }
+              - label: Case
+                name: case
+                type: Case
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: Case }
+                  - { name: link, label: Case,  widget: relation, collection: 'case',  searchFields: ['title'], valueField: 'slug' }
+              - label: Team
+                name: team
+                type: Team
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: Team }
+                  - { label: Content, name: content, widget: markdown }
+              - label: History
+                name: history
+                type: History
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: History }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Title, name: title, widget: string, required: true }                   
+                      - { label: Content, name: content, widget: markdown, required: true }         
+              - label: Locations block
+                name: panelsBlock
+                type: PanelsBlock
+                widget: object
+                fields:
+                  - { label: Template, name: template, widget: hidden, default: PanelsBlock }
+              - label: Highlight
+                name: highlight
+                type: Highlight
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: Highlight }
+                  - { label: Background image, name: backgroundimage, widget: image, required: true }
+                  - { label: Icon, name: featuredImage, widget: image, required: true }
+                  - name: block
+                    label: Block
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: Content, name: content, widget: markdown, required: true }
+              - label: Partners block
+                name: partnersBlock
+                type: PartnersBlock
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: PartnersBlock }
+              - label: Testmonials block
+                name: testimonialsBlock
+                type: TestmonialsBlock
+                widget: object
+                fields:
+                  - { label: Content, name: content, widget: markdown }
+                  - { label: Template, name: template, widget: hidden, default: TestmonialsBlock }
+                  - label: Theme
+                    name: theme
+                    widget: select
+                    options:
+                      - { label: "Grey", value: "bg-grey" }
+                      - { label: "Light", value: "bg-white" }
+          - label: 'Contact form'
             required: false
+            name: 'contactform'
+            widget: 'object'
             fields:
-              - { label: 'Title', name: 'title', widget: 'string' }
-              - { label: Content, name: content, widget: text }
+              - { label: Title, name: title, widget: markdown, required: false }
+              - { label: Enabled, name: enablecontactform, widget: boolean, required: false }
+              - label: Theme
+                name: contacttheme
+                widget: select
+                default: "contact--dark"
+                options:
+                  - { label: "Dark", value: "contact--dark" }
+                  - { label: "Light", value: "contact--light" }
+          - label: 'Contact bar'
+            required: false
+            name: 'contactbar'
+            widget: 'object'
+            fields:
+              - { label: Enabled, name: enablecontactbar, widget: boolean, required: false }
+              - { label: Title, name: title, widget: markdown, required: false }
+              - { label: CTA, name: content, widget: string, required: false }
+          - { label: Cta block, name: ctablock, widget: boolean, required: false }
           - label: 'Meta'
             required: false
             name: 'meta'
@@ -65,20 +337,14 @@ collections: # A list of collections the CMS should be able to edit
                   name: keywords,
                   widget: text,
                   required: false,
-                }                
+                } 
               - {
                   label: Canonical Link,
                   name: canonicalLink,
                   widget: string,
                   required: false,
                 }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
+              - { label: Noindex, name: noindex, widget: boolean, required: false }
   - name: basicPage
     label: Basic page
     editor:
