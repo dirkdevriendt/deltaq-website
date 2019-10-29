@@ -86,7 +86,7 @@ sections:
   - backgroundimage: 'https://ucarecdn.com/2cab144b-6a7b-4656-a90e-6cfa8553ce59/'
     block:
       - content: >-
-          In June 2018, 3E received a 2.5 million € grant from the European
+          In June 2018, 3E received a 2.5 million EUR grant from the European
           Commission, thereby acknowledging DeltaQ as a potential key
           contributor to the EU's climate and energy objectives.
       - content: >-
@@ -94,7 +94,7 @@ sections:
           industrial maturity of DeltaQ, improving scalability and commercial
           readiness.
     content: >-
-      #### This project has received funding from the European Union’s Horizon
+      #### This project has received funding from the European Union's Horizon
       2020 research and innovation programme under grant agreement No 822784
     featuredImage: 'https://ucarecdn.com/d18fa1c0-2bf4-4afd-ad2f-79e912380ed9/'
     template: Highlight
