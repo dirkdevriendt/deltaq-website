@@ -68,25 +68,6 @@ sections:
     subtitle: learn more about how DeltaQ works.
     template: StepsBlock
     type: stepsBlock
-  - backgroundimage: 'https://ucarecdn.com/3b1e2cd8-5b4f-4b7d-b56d-b7002d06942c/'
-    content: >-
-      ### Specifications
-
-
-      Because of their central role in building and occupant data collection,
-      building management systems are key in lots of the smart building services
-      offered nowadays. With BACnet and other open data communication protocols,
-      the world of building automation and control is slowly moving towards
-      better connectivity. Despited these initiatives, having a truly open
-      building control / BMS still depends largely on the specific
-      configuration. With DeltaQ, **we advise you on how to obtain a 100% open
-      and future-proof building control / BMS**, allowing you to give access to
-      any third party application without the need for additional investments or
-      expensive configuration.
-    externallink: /resources
-    subtitle: Download specifications
-    theme: bg-grey
-    type: imageText
   - content: '## Why people love DeltaQ'
     template: TestmonialsBlock
     theme: bg-white
