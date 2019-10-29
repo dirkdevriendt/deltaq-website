@@ -97,15 +97,6 @@ sections:
     subtitle: '-'
     template: TabsBlock
     type: tabsBlock
-  - backgroundimage: 'https://ucarecdn.com/af823d59-57a0-42cc-b27a-d083a67e27a2/'
-    content: |-
-      ### DeltaQ Gateway installation
-
-      Technical support for DeltaQ Gateway installation
-    externallink: /resources
-    subtitle: Download
-    theme: bg-grey
-    type: imageText
   - content: '## Why people love DeltaQ'
     template: TestmonialsBlock
     theme: bg-white
