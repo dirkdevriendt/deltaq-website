@@ -3,7 +3,8 @@ template: SingleNews
 title: DeltaQ at MIPIM PropTech NY
 status: Published
 date: 2019-11-04T19:53:44.711Z
-featuredImage: 'https://ucarecdn.com/31a45c13-4903-4b35-b314-109ab7eccae2/'
+featuredImage: >-
+  https://ucarecdn.com/31a45c13-4903-4b35-b314-109ab7eccae2/-/crop/965x564/160,0/-/preview/
 excerpt: >-
   DeltaQ will be in New York the week of the 11th of November. We will be
   present at the MIPIM PropTech New York event on the 12th and 13th of November.
