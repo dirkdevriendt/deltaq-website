@@ -100,8 +100,9 @@ sections:
           #### Building the team
 
 
-          We grew the core team from 3 to 8 key members. We continue to attract
-          new talent and are expanding the team with partners across Europe.
+          We grew the team from 3 to 11 employees to date. We continue to
+          attract new talent and are expanding the team with partners across
+          Europe.
         title: 2018 - 2019
       - content: |-
           #### Launch of DeltaQ
