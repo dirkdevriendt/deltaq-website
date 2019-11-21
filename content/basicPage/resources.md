@@ -21,7 +21,7 @@ sections:
         title: DeltaQ Requirements
       - backgroundimage: 'https://ucarecdn.com/bd5b9cfc-0f19-4629-badc-9d3c4a74091f/'
         content: Technical support for DeltaQ Gateway installation
-        externallink: 'https://workdrive.zoho.eu/file/2q0x2d9be40f189244b289c2fbcde8256c33f'
+        externallink: 'https://zdrive.eu/dHLLF8'
         subtitle: Download
         title: DeltaQ Gateway Installation
       - backgroundimage: 'https://ucarecdn.com/b5fbc657-5e87-4196-a5b9-9f157461fb42/'
