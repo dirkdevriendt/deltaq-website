@@ -3,7 +3,7 @@ import React from 'react'
 const LocationTeaser = ({
   data,
 }) => (
-  <div className="col-lg-2 col-md-4 col-6 panelitem">
+  <div className="panelitem">
     <img src={data.node.frontmatter.featuredImage} alt=""/>
     <a href="#nolink" className="content nolink">
       <div className="titel">

@@ -34,7 +34,13 @@
 .articlesection .swiper-pagination {display: block !important;}
 .casesection .swiper-pagination-bullet-active {background-color: #013A51;}
 .casesection .swiper-pagination {position: relative; bottom: 0;}
+.panelsection .swiper-pagination-bullet-active {background-color: #013A51;}
+.panelsection .swiper-pagination {position: relative; bottom: 35px;}
 .panelsection .panelitem img{height:100%;}
+.panelsection .swiper-wrapper { padding-bottom: 20px; }
+.panelsection:after { bottom: 42px; }
+.panelsection:before { bottom: 0px; height: 42px; width: 100%; background-color: #fff; content: ''; display: block; position: absolute;}
+
 .partnersection .swiper-wrapper { overflow: visible; }
 .partners { overflow: hidden; }
 .checkboxes label.error { display: none !important; }
