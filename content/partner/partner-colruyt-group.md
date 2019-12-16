@@ -2,7 +2,7 @@
 template: Partner
 title: Colruyt Group
 sortweight: 40
-featuredImage: 'https://ucarecdn.com/97c076b8-4515-4036-8457-3909e9365b2d/'
+featuredImage: 'https://ucarecdn.com/365b9c23-cbe4-46c2-9ff7-5079bf5acc40/'
 meta:
   title: Colruyt Group
 ---
