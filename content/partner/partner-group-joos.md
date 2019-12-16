@@ -2,6 +2,6 @@
 template: Partner
 title: Group Joos
 sortweight: 60
-featuredImage: 'https://ucarecdn.com/c65d05df-71b4-404d-b2ab-f8d787b18df8/'
+featuredImage: 'https://ucarecdn.com/19f36ba9-7db1-4dda-af8d-7d897a415c83/'
 ---
 
