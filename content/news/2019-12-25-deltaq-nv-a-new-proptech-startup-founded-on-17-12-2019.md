@@ -3,7 +3,8 @@ template: SingleNews
 title: 'DeltaQ nv, a new proptech startup'
 status: Published
 date: 2019-12-17T13:13:05.188Z
-featuredImage: 'https://ucarecdn.com/8abbc1b7-21d3-48c0-ae3a-65fe2718efc1/'
+featuredImage: >-
+  https://ucarecdn.com/8abbc1b7-21d3-48c0-ae3a-65fe2718efc1/-/crop/2346x1367/107,87/-/preview/
 excerpt: >-
   We are very happy to announce today the creation of [DeltaQ
   ](https://deltaq.io/)nv, as a spin-out of [3E](http://www.3e.eu/). 
