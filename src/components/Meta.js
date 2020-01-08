@@ -76,7 +76,12 @@ export default class Meta extends Component {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${googleTrackingId}');
+              gtag('config', '${googleTrackingId}', {
+                'storage': 'none',
+                'store_gac': false,
+                'anonymize_ip': true
+              });
+              gtag('send', 'pageview');
             `}
           </script>
         )}
