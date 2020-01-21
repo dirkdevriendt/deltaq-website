@@ -4,6 +4,6 @@ title: Khadija Nadi - Impact Capital
 subtitle: Director
 weight: 96
 externallink: 'https://www.linkedin.com/in/khadija-nadi-17831310/'
-featuredImage: 'https://ucarecdn.com/90f7b6c9-fce4-48dd-baf2-e1ab345a1d7f/'
+featuredImage: 'https://ucarecdn.com/bcedf59a-9813-48b5-a2b4-b52a10ad0b3c/'
 ---
 
