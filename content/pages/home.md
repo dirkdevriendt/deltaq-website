@@ -112,7 +112,8 @@ contactform:
   title: |-
     ## Get in touch
 
-    ### Meetup? See it in action?
+    ### Meet up? See it in action?
+
     ### Contact us.
 contactbar:
   enablecontactbar: false
@@ -120,12 +121,12 @@ ctablock: true
 meta:
   canonicalLink: ''
   description: >-
-    DeltaQ continuously optimizes your building controls, combining  forecast
+    DeltaQ continuously optimizes your building controls, combining forecast
     data and Artificial Intelligence to match and ensure user comfort and
     needs. 
 
     Deltaq automatically anticipates weather and occupation forecasts which
-    results in lower operational cost and saves CO2 emissions.
+    result in lower operational costs and saves CO2 emissions.
   keywords: 'Energy savings, automation, energy steering system'
   title: Making a difference with predictive building control
 ---
