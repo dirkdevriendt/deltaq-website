@@ -5,9 +5,9 @@ title: Come meet us
 sections:
   - backgroundimage: 'https://ucarecdn.com/5ec32b67-a974-468c-82e6-02a588ddce8e/'
     content: |-
-      # Come meet us 
+      # Come meet us
 
-      ## Discover how the DeltaQ technology can be beneficial to you
+      ## Discover how the DeltaQ technology offers you the comfort you need
     cta:
       - link: about
         subtitle: Come meet us at events
@@ -109,7 +109,7 @@ sections:
 
       * Online and at the moment that suits you best
     type: demoText
-  - content: '### Trusted by'
+  - content: '## Trusted by'
     template: PartnersBlock
     type: partnersBlock
 contactform:
