@@ -1,13 +1,17 @@
 ---
 template: DefaultPage
-slug: partner
-title: Become a partner
+slug: events
+title: Come meet us
 sections:
   - backgroundimage: 'https://ucarecdn.com/5ec32b67-a974-468c-82e6-02a588ddce8e/'
     content: |-
-      # Become a partner
+      # Come meet us
 
-      ## Discover how you can benefit from working with DeltaQ.
+      ## Discover how the DeltaQ technology offers you the comfort you need
+    cta:
+      - link: about
+        subtitle: Come meet us at events
+        title: Register here
     greyheader: true
     largeheader: header--medium
     template: Header
@@ -36,7 +40,7 @@ sections:
           developers and account managers **support** you every step of the way
           **in the integration of DeltaQ into your customer service.**
         icon: icon icon-certified-ribbon
-    content: '## Your benefit from a partnership'
+    content: '## Your benefit'
     template: IconsBlock
     type: iconsBlock
   - link: sodexo_belgium
@@ -49,7 +53,7 @@ sections:
     type: panelsBlock
   - backgroundimage: 'https://ucarecdn.com/739c7cb6-a2b3-4ccd-b2e4-a5cd69380e86/'
     content: >-
-      ### Specifications
+      ## Specifications
 
 
       Because of their central role in building and occupant data collection,
@@ -71,7 +75,7 @@ sections:
     type: imageText
   - backgroundimage: 'https://ucarecdn.com/adf78059-5463-45e1-8d2d-e4f23bfa3893/'
     content: >-
-      ### DeltaQ demo
+      ## DeltaQ demo
 
 
       Want to discover how DeltaQ predictive control facilitates building
@@ -105,22 +109,25 @@ sections:
 
       * Online and at the moment that suits you best
     type: demoText
-  - content: '### Trusted by'
+  - content: '## Trusted by'
     template: PartnersBlock
     type: partnersBlock
 contactform:
   contacttheme: contact--dark
   enablecontactform: true
-  title: |-
-    ## Get in touch
+  title: >-
+    ## Events registration form: 
 
-    ### Meetup? See it in action?
-    ### Contact us.
+
+    ```
+
+    <script
+    src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=96559acd096545679ce7a67882ffe1bbc1566e2141b572d26931ac7fdfddf9bdgid6a0445a9ff00e12d39b7c1ecac528f6bb44e1fb303302194924c2b307d230013&script=$sYG'></script>
+
+    ```
 meta:
-  description: >-
-    Discover how you can benefit from working with DeltaQ and our cutting edge
-    technology. 
-  keywords: 'Support, added value, integration'
-  title: Become a DeltaQ partner
+  description: 'Discover the comfort our cutting-edge technology offers you. '
+  keywords: 'Support, added value, integration, comfort, cutting-edge, '
+  title: 'Come meet us at events '
 ---
 
