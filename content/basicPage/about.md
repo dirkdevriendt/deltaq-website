@@ -112,7 +112,7 @@ sections:
     content: '## History'
     template: History
     type: history
-  - content: '### Trusted by'
+  - content: '## Trusted by'
     template: PartnersBlock
     type: partnersBlock
 contactform:
