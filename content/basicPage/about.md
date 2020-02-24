@@ -58,9 +58,6 @@ sections:
   - content: '## Management'
     template: Team
     type: team
-  - content: '## Board'
-    template: Team
-    type: team
   - block:
       - content: >-
           #### Building consultants since 1999
