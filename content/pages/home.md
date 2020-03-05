@@ -125,8 +125,8 @@ meta:
     data and Artificial Intelligence to match and ensure user comfort and
     needs. 
 
-    Deltaq automatically anticipates weather and occupation forecasts which
-    result in lower operational costs and saves CO2 emissions.
+    DeltaQ automatically anticipates weather and occupation forecasts, which
+    results in lower operational costs and saves CO2 emissions.
   keywords: 'Energy savings, automation, energy steering system'
   title: Making a difference with predictive building control
 ---
