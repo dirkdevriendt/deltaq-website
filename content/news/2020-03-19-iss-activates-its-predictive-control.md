@@ -5,12 +5,12 @@ status: Featured
 date: 2020-03-19T12:38:07.465Z
 featuredImage: 'https://ucarecdn.com/75a9122f-8aed-4336-994c-f8b3827fd529/'
 excerpt: >-
-  Congratulations at [**ISS Facility Services Belgium &
+  Congratulations at ****[**ISS Facility Services Belgium &
   Luxembourg**](https://www.be.issworld.com/) ****for choosing
-  [**DeltaQ**](https://www.linkedin.com/company/deltaq-io/?viewAsMember=true)
-  ****to improve sustainability on its headquarters in
-  [Vilvoorde](https://www.vilvoorde.be/). We also look forward to collaborating
-  with [**VMA be.Maintenance**](https://www.vma.be/en) on this one.
+  ****[**DeltaQ**](https://www.linkedin.com/company/20355489) ****to improve
+  sustainability on its headquarters in [Vilvoorde](https://www.vilvoorde.be/).
+  We also look forward to collaborating with [**VMA
+  be.Maintenance**](https://www.vma.be/en) on this one.
 
 
   Special thanks to [Klaartje Van
