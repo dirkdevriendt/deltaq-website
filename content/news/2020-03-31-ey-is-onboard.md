@@ -18,7 +18,8 @@ meta:
   keywords: >-
     optimize, building optimization, building optimisation, building
     performance, facilities, facility, COVID-19, Corona virus, expanding, real
-    estate, activities, EY, Dieghem Gent.
+    estate, activities, EY, Diegem, Dieghem, Gent, proptech, Prop-tech, DeltaQ,
+    smart building,
   title: 'EY using DeltaQ''s predictive control for building optimization '
 ---
 
