@@ -11,7 +11,7 @@ excerpt: >-
 
   And we keep on expanding our activities at [**EY**](https://www.ey.com/en_be)
   in [**Diegem**](https://www.machelen.be/) and
-  [Ghent](https://visit.gent.be/en).
+  [**Ghent**](https://visit.gent.be/en).
 subtitle: Follow us on LinkedIn for more updates
 externallink: 'https://www.linkedin.com/company/20355489'
 meta:
