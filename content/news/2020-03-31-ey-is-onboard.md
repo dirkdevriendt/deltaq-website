@@ -10,16 +10,16 @@ excerpt: >-
 
 
   And we keep on expanding our activities at [**EY**](https://www.ey.com/en_be)
-  in [**Diegem**](https://www.machelen.be/) ****and
-  [**Gent**](https://visit.gent.be/en).
+  in [**Diegem**](https://www.machelen.be/) and
+  [Ghent](https://visit.gent.be/en).
 subtitle: Follow us on LinkedIn for more updates
 externallink: 'https://www.linkedin.com/company/20355489'
 meta:
   keywords: >-
     optimize, building optimization, building optimisation, building
     performance, facilities, facility, COVID-19, Corona virus, expanding, real
-    estate, activities, EY, Diegem, Dieghem, Gent, proptech, Prop-tech, DeltaQ,
-    smart building,
+    estate, activities, EY, Diegem, Dieghem, Gent, Ghent, proptech, Prop-tech,
+    DeltaQ, smart building,
   title: 'EY using DeltaQ''s predictive control for building optimization '
 ---
 
