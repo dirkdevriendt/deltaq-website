@@ -1,8 +1,9 @@
 ---
 template: Location
-title: Sint-Lambertus Buren
-subtitle: Zelem Halen
+title: EY Machelen
+subtitle: Machelen
 sortweight: 55
-featuredImage: 'https://ucarecdn.com/fd6a81ed-388c-4f74-9ca4-4c9b3455100c/'
+featuredImage: >-
+  https://ucarecdn.com/8193adc4-1e12-4ea7-bd09-d440a440a43a/-/crop/356x533/232,0/-/preview/
 ---
-Sint-Lambertus Buren
+Ernst & Young
