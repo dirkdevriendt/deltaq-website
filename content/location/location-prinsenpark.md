@@ -1,8 +1,8 @@
 ---
 template: Location
-title: Prinsenpark
-subtitle: Genk
+title: EY Gent
+subtitle: Gent
 sortweight: 50
-featuredImage: 'https://ucarecdn.com/4945ccc5-e417-4e1b-992c-859ae1221659/'
+featuredImage: 'https://ucarecdn.com/19774f9b-0b74-482f-819f-d468fb1bba1e/'
 ---
-Prinsenpark
+Ernst & Young
