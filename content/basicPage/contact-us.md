@@ -6,7 +6,7 @@ sections: []
 contactform:
   contacttheme: contact--light
   enablecontactform: true
-  title: '## Contact us'
+  title: '## Any questions? Get in touch!'
 contactbar:
   enablecontactbar: true
 ---
