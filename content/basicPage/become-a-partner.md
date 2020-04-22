@@ -37,7 +37,7 @@ sections:
           developers and account managers **support** you every step of the way
           **in the integration of DeltaQ into your customer service.**
         icon: icon icon-certified-ribbon
-    content: '## Your benefit from a partnership'
+    content: '## Your benefits from a partnership'
     template: IconsBlock
     type: iconsBlock
   - link: sodexo_belgium
