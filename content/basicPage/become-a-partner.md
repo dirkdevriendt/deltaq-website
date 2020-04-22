@@ -1,17 +1,14 @@
 ---
 template: DefaultPage
-slug: events
-title: Come meet us
+slug: partner
+title: Become a partner
 sections:
   - backgroundimage: 'https://ucarecdn.com/5ec32b67-a974-468c-82e6-02a588ddce8e/'
     content: |-
-      # Come meet us
+      # Become a partner
 
-      ## Discover how the DeltaQ technology offers you the comfort you need
-    cta:
-      - link: about
-        subtitle: Come meet us at events
-        title: Register here
+      ## Discover how working with DeltaQ benefits you
+    cta: []
     greyheader: true
     largeheader: header--medium
     template: Header
@@ -40,7 +37,7 @@ sections:
           developers and account managers **support** you every step of the way
           **in the integration of DeltaQ into your customer service.**
         icon: icon icon-certified-ribbon
-    content: '## Your benefit'
+    content: '## Your benefit from a partnership'
     template: IconsBlock
     type: iconsBlock
   - link: sodexo_belgium
@@ -115,19 +112,10 @@ sections:
 contactform:
   contacttheme: contact--dark
   enablecontactform: true
-  title: >-
-    ## Events registration form: 
-
-
-    ```
-
-    <script
-    src='https://crm.zoho.eu/crm/WebFormServeServlet?rid=96559acd096545679ce7a67882ffe1bbc1566e2141b572d26931ac7fdfddf9bdgid6a0445a9ff00e12d39b7c1ecac528f6bb44e1fb303302194924c2b307d230013&script=$sYG'></script>
-
-    ```
+  title: '## Contact us'
 meta:
-  description: 'Discover the comfort our cutting-edge technology offers you. '
+  description: 'Discover the benefits our cutting-edge technology offers you. '
   keywords: 'Support, added value, integration, comfort, cutting-edge, '
-  title: 'Come meet us at events '
+  title: Become a partner
 ---
 
