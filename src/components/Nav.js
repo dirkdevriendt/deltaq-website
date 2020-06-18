@@ -73,7 +73,7 @@ export class Navigation extends Component {
                   <NavDropdown.Item href="/contact" className="dropdown-item">Contact us <span>How can we help?</span></NavDropdown.Item>
                 </NavDropdown>
               </Nav.Item>
-              <Nav.Item as="li" className="arrowlink"><Nav.Link href="https://app.deltaq.io" target='_blank'>Login</Nav.Link></Nav.Item>
+              <Nav.Item as="li" className="arrowlink"><Nav.Link href="https://app.deltaq.io" target="_blank" rel="noopener">Login</Nav.Link></Nav.Item>
               <Nav.Item as="li" className="navbutton">
                 <Nav.Link href="/partner" className="nav-link">Become a partner</Nav.Link>
               </Nav.Item>
