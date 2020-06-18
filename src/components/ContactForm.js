@@ -56,8 +56,8 @@ export default ({props}) => {
                     
                     <h5>Connect with us</h5>
                     <ul className="socials">
-                      <li><a href={linkedin} target="_blank" rel="noopener noreferrer"><span className="icon-linkedin">DeltaQ LinkedIn</span></a></li>
-                      <li><a href={twitter} target="_blank" rel="noopener noreferrer"><span className="icon-twitter">DeltaQ Twitter</span></a></li>
+                      <li><a href={linkedin} target="_blank" rel="noopener noreferrer" alt="DeltaQ LinkedIn"><span className="icon-linkedin"></span></a></li>
+                      <li><a href={twitter} target="_blank" rel="noopener noreferrer" alt="DeltaQ Twitter"><span className="icon-twitter"></span></a></li>
                     </ul>
                   </div>
                 </div>
