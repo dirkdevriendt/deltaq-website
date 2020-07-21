@@ -1,6 +1,6 @@
 ---
 template: DefaultPage
-slug: /career-at-deltaq
+slug: career
 title: Career at DeltaQ
 sections:
   - content: >-
