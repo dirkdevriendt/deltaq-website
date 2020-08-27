@@ -55,7 +55,7 @@ sections:
       to reach reach 2030 climate objectives.
     title: ''
     type: quote
-  - content: '## Management & Board'
+  - content: '## Team'
     template: Team
     type: team
   - block:
