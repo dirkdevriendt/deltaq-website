@@ -4,6 +4,6 @@ title: Jules Hammenecker
 subtitle: Project Manager
 weight: 100
 externallink: 'https://www.linkedin.com/in/julesham/'
-featuredImage: 'https://ucarecdn.com/597b670b-6289-4571-98ad-91bb8683328d/'
+featuredImage: 'https://ucarecdn.com/7a424b4e-f6f0-4f53-a73f-622e4d6401b9/'
 ---
 
