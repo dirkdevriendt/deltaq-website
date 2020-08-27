@@ -1,6 +1,6 @@
 ---
 template: Team
-title: Ando  Andriamamonjy
+title: Ando Andriamamonjy
 subtitle: Building Control Expert
 weight: 80
 externallink: 'https://www.linkedin.com/in/ando-andriamamonjy-888285166/'
