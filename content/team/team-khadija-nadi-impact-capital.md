@@ -1,6 +1,6 @@
 ---
 template: Team
-title: Khadija Nadi - Impact Capital
+title: Khadija Nadi
 subtitle: CEO
 weight: 96
 externallink: 'https://www.linkedin.com/in/khadija-nadi-17831310/'
