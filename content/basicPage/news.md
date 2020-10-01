@@ -86,12 +86,21 @@ sections:
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-      ## 
+      ## \*\*\*\*
 
 
       **For more info contact Khadija: khadija.nadi@deltaq.io or** [**download
-      our DeltaQ Press
-      Kit!**](https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download)****
+      our
+      mediakit**](https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download)**!**
+
+
+      ```
+
+      <a
+      href="https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download"><span
+      class="smallBtn ghostBtn">Download</span></a>
+
+      ```
 
 
       ![Khadija Nadi, CEO
@@ -127,8 +136,7 @@ sections:
       Belgium -  www.aconterra.com
     type: basicText
   - block:
-      - backgroundimage: 'https://ucarecdn.com/72c13ce2-cd86-4b1a-a3b5-0dd663657295/'
-        content: 'Includes Q&A, brochure and photos'
+      - content: 'Includes Q&A, brochure and photos'
         externallink: 'https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download'
         subtitle: Download
         title: DeltaQ Press Kit
