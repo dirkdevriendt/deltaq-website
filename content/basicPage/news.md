@@ -129,6 +129,13 @@ sections:
       for its investors and portfolio companies. Aconterra is based in Antwerp,
       Belgium -  www.aconterra.com
     type: basicText
+  - block:
+      - content: 'Includes Q&A, brochure and photos'
+        externallink: 'https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download'
+        subtitle: Download
+        title: DeltaQ Press Kit
+    template: ResourcesBlock
+    type: resourcesBlock
 contactform:
   contacttheme: contact--dark
   enablecontactform: true
