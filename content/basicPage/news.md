@@ -4,7 +4,7 @@ slug: news
 title: News
 sections:
   - backgroundimage: >-
-      https://ucarecdn.com/e7774131-1ce6-404a-8f51-7d9b45781eef/-/crop/2723x839/0,516/-/preview/
+      https://ucarecdn.com/e7774131-1ce6-404a-8f51-7d9b45781eef/-/crop/2102x831/636,527/-/preview/
     content: >-
       # DeltaQ more ready than ever to globally reduce commercial buildings’
       CO2-emissions up to 40%
@@ -25,12 +25,16 @@ sections:
       significantly to worldwide sustainability targets.** 
 
 
+
+
       - - -
 
 
       The investment round was led by Impact Capital (holding Piet Colruyt) and
       Aconterra. Thomas Leysen, Elanti and the management also participated in
       the capital increase.
+
+
 
 
       DeltaQ has developed and is commercialising a machine learning solution
@@ -43,10 +47,14 @@ sections:
       insulation). Payback times of the solution are limited to a few months.
 
 
+
+
       DeltaQ’s solution has so many benefits for different stakeholders within a
       building and international sustainability agreements, it can be a real
       gamechanger when it comes to smart solutions in this area. Ron Schuermans
       of Aconterra, is specialized in property technology. He says: 
+
+
 
 
       _“We consider DeltaQ’s solution as one of the most effective solutions to
@@ -54,13 +62,21 @@ sections:
       environment. That is why we have decided to invest in DeltaQ.”_ 
 
 
+
+
       Piet Colruyt, founder of Impact Capital, who has seen many start-ups and
       scale ups come and go, says: 
+
+
 
 
       > “DeltaQ possesses everything to make a significant impact on global
       climate change: an easy solution, a great track record, and a dedicated
       team”
+
+      >
+
+      >
 
 
       DeltaQ was incorporated in 2019 as a spinoff of the Belgian company 3E, a
@@ -69,12 +85,18 @@ sections:
       managers in the world use DeltaQ’s solutions. 
 
 
+
+
       The plan to reach DeltaQ’s ambitions have been developed by the new CEO,
       Khadija Nadi, who was with DeltaQ as director. She is officially appointed
       as CEO immediately following the capital increase.
 
 
+
+
       Werner Koninckx, chairman of DeltaQ: 
+
+
 
 
       > _“Khadija has a wealth of experience in strategy, marketing, global
@@ -82,8 +104,18 @@ sections:
       strong leadership in various settings and business sectors. We are
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
+      >
 
-      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/)
+      > __
+
+
+      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/-/crop/466x628/71,2/-/preview/)
+
+
+      ****
+
+
+      ****
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
@@ -111,10 +143,13 @@ sections:
       Belgium -  www.aconterra.com
 
 
-      For more information: Khadija Nadi (CEO DeltaQ) – Khadija.Nadi@deltaq.io 
 
 
-      Or download our press kit, including our Q&A, brochure and photos.
+      **For more information: Khadija Nadi (CEO DeltaQ) –
+      Khadija.Nadi@deltaq.io** 
+
+
+      **Or download our press kit, including our Q&A, brochure and photos.**
     type: basicText
 contactform:
   contacttheme: contact--dark
