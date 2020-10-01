@@ -58,9 +58,9 @@ sections:
       scale ups come and go, says: 
 
 
-      > **_“DeltaQ possesses everything to make a significant impact on global
+      > _**“DeltaQ possesses everything to make a significant impact on global
       climate change: an easy solution, a great track record, and a dedicated
-      team”_**
+      team”**_
 
 
       DeltaQ was incorporated in 2019 as a spinoff of the Belgian company 3E, a
@@ -77,10 +77,10 @@ sections:
       Werner Koninckx, chairman of DeltaQ: 
 
 
-      > **_“Khadija has a wealth of experience in strategy, marketing, global
+      > _**“Khadija has a wealth of experience in strategy, marketing, global
       sales and building businesses. Throughout her career, she has demonstrated
       strong leadership in various settings and business sectors. We are
-      thrilled with Khadija joining as CEO to lead DeltaQ.”_**
+      thrilled with Khadija joining as CEO to lead DeltaQ.”**_
 
       >
 
@@ -97,10 +97,12 @@ sections:
 
       >
 
-      > ****
+      > - - -
 
 
-      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/-/crop/466x628/71,2/-/preview/)
+      ![Khadija Nadi, CEO 
+      DeltaQ](https://ucarecdn.com/0b7b79fe-59ae-4f65-bbad-25104ce0b912/-/preview/-/enhance/53/
+      "Khadija Nadi, CEO DeltaQ")
 
 
       - - -
