@@ -3,7 +3,9 @@ template: DefaultPage
 slug: news
 title: News
 sections:
-  - content: >-
+  - backgroundimage: >-
+      https://ucarecdn.com/e7774131-1ce6-404a-8f51-7d9b45781eef/-/crop/2723x839/0,516/-/preview/
+    content: >-
       # DeltaQ more ready than ever to globally reduce commercial buildings’
       CO2-emissions up to 40%
 
@@ -75,19 +77,13 @@ sections:
       Werner Koninckx, chairman of DeltaQ: 
 
 
-      _“Khadija has a wealth of experience in strategy, marketing, global sales
-      and building businesses. Throughout her career, she has demonstrated
+      > _“Khadija has a wealth of experience in strategy, marketing, global
+      sales and building businesses. Throughout her career, she has demonstrated
       strong leadership in various settings and business sectors. We are
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-      __
-
-
       ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/)
-
-
-      __
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
