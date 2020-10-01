@@ -28,9 +28,13 @@ sections:
       - - -
 
 
+
+
       The investment round was led by Impact Capital (holding Piet Colruyt) and
       Aconterra. Thomas Leysen, Elanti and the management also participated in
       the capital increase.
+
+
 
 
       DeltaQ has developed and is commercialising a machine learning solution
@@ -43,24 +47,30 @@ sections:
       insulation). Payback times of the solution are limited to a few months.
 
 
+
+
       DeltaQ’s solution has so many benefits for different stakeholders within a
       building and international sustainability agreements, it can be a real
       gamechanger when it comes to smart solutions in this area. Ron Schuermans
       of Aconterra, is specialized in property technology. He says: 
 
 
-      **_“We consider DeltaQ’s solution as one of the most effective solutions
-      to significantly reduce CO2-emissions and increase efficiency in the built
-      environment. That is why we have decided to invest in DeltaQ.”_ **
+      _“We consider DeltaQ’s solution as one of the most effective solutions to
+      significantly reduce CO2-emissions and increase efficiency in the built
+      environment. That is why we have decided to invest in DeltaQ.”_ 
+
+
 
 
       Piet Colruyt, founder of Impact Capital, who has seen many start-ups and
       scale ups come and go, says: 
 
 
-      > _**“DeltaQ possesses everything to make a significant impact on global
+      > _“DeltaQ possesses everything to make a significant impact on global
       climate change: an easy solution, a great track record, and a dedicated
-      team”**_
+      team”_
+
+
 
 
       DeltaQ was incorporated in 2019 as a spinoff of the Belgian company 3E, a
@@ -77,38 +87,24 @@ sections:
       Werner Koninckx, chairman of DeltaQ: 
 
 
-      > _**“Khadija has a wealth of experience in strategy, marketing, global
+      > _“Khadija has a wealth of experience in strategy, marketing, global
       sales and building businesses. Throughout her career, she has demonstrated
       strong leadership in various settings and business sectors. We are
-      thrilled with Khadija joining as CEO to lead DeltaQ.”**_
-
-      >
-
-      > __
-
-      >
-
-      > **For more information: Khadija Nadi (CEO DeltaQ) –
-      Khadija.Nadi@deltaq.io** 
-
-      >
-
-      > **Or download our press kit, including our Q&A, brochure and photos.**
-
-      >
-
-      > - - -
+      thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-      ![Khadija Nadi, CEO 
-      DeltaQ](https://ucarecdn.com/0b7b79fe-59ae-4f65-bbad-25104ce0b912/-/preview/-/enhance/53/
+
+
+      **For more info contact Khadija: khadija.nadi@deltaq.io or download our
+      mediakit!**
+
+
+      ![Khadija Nadi, CEO
+      DeltaQ](https://ucarecdn.com/0890676f-59b2-4a90-97c6-80c487893b76/
       "Khadija Nadi, CEO DeltaQ")
 
 
-      - - -
-
-
-      - - -
+      ****
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
