@@ -30,8 +30,6 @@ sections:
       the capital increase.
 
 
-
-
       ## **About our solution**
 
 
@@ -54,8 +52,6 @@ sections:
       _“We consider DeltaQ’s solution as one of the most effective solutions to
       significantly reduce CO2-emissions and increase efficiency in the built
       environment. That is why we have decided to invest in DeltaQ.”_ 
-
-
 
 
       ## About our company
@@ -90,11 +86,12 @@ sections:
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-      ## ****
+      ## 
 
 
-      ## **For more info contact Khadija: khadija.nadi@deltaq.io or download our
-      mediakit!**
+      **For more info contact Khadija: khadija.nadi@deltaq.io or** [**download
+      our DeltaQ Press
+      Kit!**](https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download)****
 
 
       ![Khadija Nadi, CEO
@@ -130,7 +127,8 @@ sections:
       Belgium -  www.aconterra.com
     type: basicText
   - block:
-      - content: 'Includes Q&A, brochure and photos'
+      - backgroundimage: 'https://ucarecdn.com/72c13ce2-cd86-4b1a-a3b5-0dd663657295/'
+        content: 'Includes Q&A, brochure and photos'
         externallink: 'https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download'
         subtitle: Download
         title: DeltaQ Press Kit
