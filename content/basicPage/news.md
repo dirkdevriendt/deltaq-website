@@ -8,9 +8,13 @@ sections:
       CO2-emissions up to 40%
 
 
-      ****
-
-
+      - - -
+    cta: []
+    greyheader: true
+    largeheader: header--medium
+    template: Header
+    type: header
+  - content: >-
       **With a proven concept, DeltaQ, a Brussels based scale-up focusing on
       reducing energy consumption in commercial buildings, attracted additional
       equity funding to fuel its international impact on CO2 reduction and to
@@ -19,7 +23,7 @@ sections:
       significantly to worldwide sustainability targets.** 
 
 
-      ****
+      - - -
 
 
       The investment round was led by Impact Capital (holding Piet Colruyt) and
@@ -77,15 +81,13 @@ sections:
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
+      __
 
 
-      ![Khadija Nadi, CEO
-      DeltaQ](https://ucarecdn.com/52104061-9a38-4fa3-b536-9e316b8ae96d/
-      "Khadija Nadi, CEO DeltaQ")
+      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/)
 
 
-
-
+      __
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
@@ -113,22 +115,10 @@ sections:
       Belgium -  www.aconterra.com
 
 
-
-
       For more information: Khadija Nadi (CEO DeltaQ) – Khadija.Nadi@deltaq.io 
 
 
       Or download our press kit, including our Q&A, brochure and photos.
-
-
-
-
-      ##
-    greyheader: true
-    largeheader: header--medium
-    template: Header
-    type: header
-  - content: Test
     type: basicText
 contactform:
   contacttheme: contact--dark
