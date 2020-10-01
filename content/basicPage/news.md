@@ -89,16 +89,9 @@ sections:
       ## \*\*\*\*
 
 
-      **For more info contact Khadija: khadija.nadi@deltaq.io or** [**download
+      **For more info contact Khadija: khadija.nadi@deltaq.io or** [**<download
       our
-      mediakit**](https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download)**!**
-
-
-
-      <a
-      href="https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download"><span
-      class="smallBtn ghostBtn">Download</span></a>
-
+      mediakit>**](https://workdrive.zohopublic.eu/external/PSWyCQTiBw-lTZFCd/download)**!**
 
 
       ![Khadija Nadi, CEO
