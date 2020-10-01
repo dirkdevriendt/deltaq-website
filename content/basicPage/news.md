@@ -83,7 +83,7 @@ sections:
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/)
+      ![](https://ucarecdn.com/4e37e1f7-6007-44cb-bfab-25b67dfe016e/-/crop/466x628/71,2/-/preview/)
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
