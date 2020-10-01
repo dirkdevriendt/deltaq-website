@@ -25,16 +25,12 @@ sections:
       significantly to worldwide sustainability targets.** 
 
 
-      - - -
-
-
-
-
       The investment round was led by Impact Capital (holding Piet Colruyt) and
       Aconterra. Thomas Leysen, Elanti and the management also participated in
       the capital increase.
 
 
+      ## **About our solution**
 
 
       DeltaQ has developed and is commercialising a machine learning solution
@@ -45,8 +41,6 @@ sections:
       significantly to reduce global climate change The company can realize this
       ambitious target without requiring big investments (such as additional
       insulation). Payback times of the solution are limited to a few months.
-
-
 
 
       DeltaQ’s solution has so many benefits for different stakeholders within a
@@ -60,6 +54,7 @@ sections:
       environment. That is why we have decided to invest in DeltaQ.”_ 
 
 
+      ## About our company
 
 
       Piet Colruyt, founder of Impact Capital, who has seen many start-ups and
@@ -69,8 +64,6 @@ sections:
       > _“DeltaQ possesses everything to make a significant impact on global
       climate change: an easy solution, a great track record, and a dedicated
       team”_
-
-
 
 
       DeltaQ was incorporated in 2019 as a spinoff of the Belgian company 3E, a
@@ -93,8 +86,6 @@ sections:
       thrilled with Khadija joining as CEO to lead DeltaQ.”_
 
 
-
-
       **For more info contact Khadija: khadija.nadi@deltaq.io or download our
       mediakit!**
 
@@ -104,7 +95,7 @@ sections:
       "Khadija Nadi, CEO DeltaQ")
 
 
-      ****
+      - - -
 
 
       **About DeltaQ**: DeltaQ is a SaaS# – solution that uses machine learning
