@@ -4,7 +4,7 @@ title: We are hiring! Are you are new Sales Manager?
 status: Published
 date: 2020-09-28T12:48:18.019Z
 featuredImage: >-
-  https://ucarecdn.com/eb5bd63a-8dd4-48f6-aa89-0ff17be7c1a1/-/crop/1825x1078/0,426/-/preview/
+  https://ucarecdn.com/754cf185-266c-4179-895c-5bd3e596e926/-/crop/1825x1638/0,454/-/preview/
 excerpt: >-
   Are you the dedicated sales manager to support our team? Do you want to
   contribute to realizing the world's ambition to fight climate change? Check
