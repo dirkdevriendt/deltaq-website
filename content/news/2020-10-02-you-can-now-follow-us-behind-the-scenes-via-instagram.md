@@ -1,6 +1,6 @@
 ---
 template: SingleNews
-title: You can now follow us behind the scenes via Instagram!
+title: You can now follow us behind the scenes on Instagram!
 status: Published
 date: 2020-10-02T12:44:12.962Z
 featuredImage: >-
