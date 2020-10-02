@@ -4,6 +4,6 @@ title: Roel De Coninck
 subtitle: Co-Founder & Head of Technology
 weight: 4
 externallink: 'https://www.linkedin.com/in/roel-de-coninck-3647596/'
-featuredImage: 'https://ucarecdn.com/5461cd97-1735-41d4-96fa-d94a325df23d/'
+featuredImage: 'https://ucarecdn.com/ec445e51-edb7-4b0c-b2a1-946c27f498ea/'
 ---
 
