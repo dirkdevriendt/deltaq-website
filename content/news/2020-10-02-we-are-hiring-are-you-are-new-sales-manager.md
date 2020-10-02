@@ -1,6 +1,6 @@
 ---
 template: SingleNews
-title: We are hiring! Are you are new Sales Manager?
+title: We are hiring! Are you our new Sales Manager?
 status: Published
 date: 2020-09-28T12:48:18.019Z
 featuredImage: >-
