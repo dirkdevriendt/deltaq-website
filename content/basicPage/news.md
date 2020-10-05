@@ -6,7 +6,7 @@ sections:
   - backgroundimage: >-
       https://ucarecdn.com/e7774131-1ce6-404a-8f51-7d9b45781eef/-/crop/2102x831/636,527/-/preview/
     content: >-
-      # DeltaQ more ready than ever to globally reduce commercial buildings’
+      ## DeltaQ more ready than ever to globally reduce commercial buildings’
       CO2-emissions up to 40%
 
 
