@@ -1,6 +1,6 @@
 ---
 template: Team
-title: Maybe you?
+title: You?
 subtitle: 'More info about open vacancies? Send us a message: HR@DeltaQ.io'
 weight: 16
 externallink: ''
